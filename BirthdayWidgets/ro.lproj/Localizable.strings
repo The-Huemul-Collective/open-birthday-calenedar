@@ -1,0 +1,15 @@
+"birthdayList.title" = "Zile de naștere";
+"section.today" = "Azi 🎂";
+"section.thisWeek" = "Săptămâna aceasta";
+"section.thisMonth" = "Luna aceasta";
+"section.later" = "Mai târziu";
+"common.cancel" = "Anulează";
+"common.save" = "Salvează";
+"settings.title" = "Setări";
+"settings.about.version" = "Versiune";
+"import.importAll" = " echo 'Importovať všetko';; hu) echo 'Mindent importál';; ro) echo 'Importă tot';; hr) echo 'Uvezi sve';; ca) echo 'Importa tot';; esac)";
+"action.delete" = " echo 'Zmazať';; hu) echo 'Törlés';; ro) echo 'Șterge';; hr) echo 'Obriši';; ca) echo 'Elimina';; esac)";
+"action.favorite" = " echo 'Obľúbený';; hu) echo 'Kedvenc';; ro) echo 'Favorit';; hr) echo 'Favorit';; ca) echo 'Preferit';; esac)";
+"widget.favorites" = " echo 'OBĽÚBENÍ';; hu) echo 'KEDVENCEK';; ro) echo 'FAVORITE';; hr) echo 'FAVORITI';; ca) echo 'PREFERITS';; esac)";
+"widget.comingUp" = " echo 'ČOSKORO';; hu) echo 'HAMAROSAN';; ro) echo 'ÎN CURÂND';; hr) echo 'USKORO';; ca) echo 'PRÒXIMAMENT';; esac)";
+"settings.about.madeWith" = " echo 'Vyrobené s ❤️ v Hamburgu';; hu) echo 'Szeretettel készítve ❤️ Hamburgban';; ro) echo 'Făcut cu ❤️ în Hamburg';; hr) echo 'Napravljeno s ❤️ u Hamburgu';; ca) echo 'Fet amb ❤️ a Hamburg';; esac)";

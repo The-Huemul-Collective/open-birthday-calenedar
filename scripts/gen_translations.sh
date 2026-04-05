@@ -1,0 +1,1161 @@
+#!/usr/bin/env bash
+# Generates Localizable.strings for all supported European languages.
+# Run from repo root: bash scripts/gen_translations.sh
+
+BASE="BirthdayCalendar/Resources"
+
+write_strings() {
+  local lang="$1"; shift
+  local dir="$BASE/$lang.lproj"
+  mkdir -p "$dir"
+  cat > "$dir/Localizable.strings" <<EOF
+$@
+EOF
+  echo "  ✓ $lang"
+}
+
+# ── German ────────────────────────────────────────────────────────────────────
+write_strings de \
+'/* Onboarding */
+"onboarding.freePitch" = "Kostenlos. Für immer.";
+"onboarding.freeSubtitle" = "Keine Abos. Keine Werbung. Keine Konten.\nOpen Birthday ist vollständig kostenlos und bleibt es immer.";
+"onboarding.getStarted" = "Los geht'"'"'s";
+"onboarding.permissionsTitle" = "Noch zwei Dinge…";
+"onboarding.contacts.title" = "Kontakte";
+"onboarding.contacts.subtitle" = "Importiere Geburtstage und Profilfotos aus deinen Kontakten.";
+"onboarding.notifications.title" = "Benachrichtigungen";
+"onboarding.notifications.subtitle" = "Erinnere dich an Geburtstage deiner Freunde – und vorher bei Favoriten.";
+"onboarding.allowAndContinue" = "Erlauben & Weiter";
+"onboarding.skipForNow" = "Jetzt überspringen";
+/* Birthday List */
+"birthdayList.title" = "Geburtstage";
+"birthdayList.searchPlaceholder" = "Geburtstage suchen";
+"birthdayList.empty.title" = "Noch keine Geburtstage";
+"birthdayList.empty.subtitle" = "Importiere aus Kontakten oder füge jemanden manuell hinzu.";
+"birthdayList.noResults.title" = "Keine Ergebnisse";
+"birthdayList.noResults.subtitle" = "Niemand entspricht \"%@\".";
+/* Sections */
+"section.today" = "Heute 🎂";
+"section.thisWeek" = "Diese Woche";
+"section.thisMonth" = "Diesen Monat";
+"section.later" = "Später";
+/* Actions */
+"action.delete" = "Löschen";
+"action.mute" = "Stumm";
+"action.unmute" = "Ton an";
+"action.favorite" = "Favorit";
+"action.unfavorite" = "Kein Favorit";
+/* Add/Edit */
+"addEdit.add.title" = "Geburtstag hinzufügen";
+"addEdit.edit.title" = "Geburtstag bearbeiten";
+"addEdit.section.person" = "Person";
+"addEdit.field.name" = "Name";
+"addEdit.field.emoji" = "Emoji (optional)";
+"addEdit.section.birthday" = "Geburtstag";
+"addEdit.field.month" = "Monat";
+"addEdit.field.day" = "Tag";
+"addEdit.field.year" = "Jahr (optional)";
+"addEdit.section.options" = "Optionen";
+"addEdit.option.favorite" = "Favorit";
+"addEdit.option.notifications" = "Benachrichtigungen";
+/* Common */
+"common.cancel" = "Abbrechen";
+"common.save" = "Sichern";
+/* Import */
+"import.title" = "Kontakte importieren";
+"import.button" = "%d importieren";
+"import.importAll" = "Alle importieren";
+"import.loading" = "Kontakte laden…";
+"import.error.title" = "Kein Zugriff auf Kontakte";
+"import.error.subtitle" = "Bitte erlaube den Zugriff in den Einstellungen.";
+"import.noContacts.title" = "Keine Kontakte mit Geburtstagen";
+"import.noContacts.subtitle" = "Füge Geburtstage in der Kontakte-App hinzu.";
+"import.added" = "Hinzugefügt";
+/* Settings */
+"settings.title" = "Einstellungen";
+"settings.section.appearance" = "Erscheinungsbild";
+"settings.section.notifications" = "Benachrichtigungen";
+"settings.section.about" = "Über";
+"settings.notification.daily" = "Tägliche Erinnerung";
+"settings.notification.favReminder" = "Früherinnerung für Favoriten";
+"settings.notification.favDays" = "%d Tage vorher";
+"settings.about.version" = "Version";
+"settings.about.freeForever" = "Für immer kostenlos";
+"settings.about.freeForeverSub" = "Keine Abos, keine Werbung, keine Konten.";
+"settings.about.localData" = "Deine Daten bleiben auf dem Gerät";
+"settings.about.localDataSub" = "Nichts wird hochgeladen oder geteilt. Niemals.";
+"settings.about.madeWith" = "Mit ❤️ in Hamburg gemacht";
+/* Birthday */
+"birthday.turns" = "Wird %d";
+"birthday.today" = "Heute 🎂";
+"birthday.tomorrow" = "Morgen";
+"birthday.inDays" = "in %d Tagen";
+"birthday.days" = "Tage";
+/* Widgets */
+"widget.empty" = "Keine Geburtstage";
+"widget.emptySubtitle" = "App öffnen zum Hinzufügen";
+"widget.favorites" = "FAVORITEN";
+"widget.noFavorites" = "Noch keine Favoriten";
+"widget.noFavoritesSub" = "Markiere jemanden in der App";
+"widget.comingUp" = "DEMNÄCHST";
+"widget.todayBirthday" = "Heute! 🎂";'
+
+# ── French ────────────────────────────────────────────────────────────────────
+write_strings fr \
+'/* Onboarding */
+"onboarding.freePitch" = "Gratuit. Pour toujours.";
+"onboarding.freeSubtitle" = "Pas d'"'"'abonnement. Pas de pub. Pas de compte.\nOpen Birthday est entièrement gratuit et le restera toujours.";
+"onboarding.getStarted" = "Commencer";
+"onboarding.permissionsTitle" = "Juste deux choses…";
+"onboarding.contacts.title" = "Contacts";
+"onboarding.contacts.subtitle" = "Importez les anniversaires et photos depuis vos contacts.";
+"onboarding.notifications.title" = "Notifications";
+"onboarding.notifications.subtitle" = "Soyez rappelé des anniversaires — et en avance pour vos favoris.";
+"onboarding.allowAndContinue" = "Autoriser & Continuer";
+"onboarding.skipForNow" = "Passer pour l'"'"'instant";
+/* Birthday List */
+"birthdayList.title" = "Anniversaires";
+"birthdayList.searchPlaceholder" = "Rechercher";
+"birthdayList.empty.title" = "Aucun anniversaire";
+"birthdayList.empty.subtitle" = "Importez depuis Contacts ou ajoutez quelqu'"'"'un manuellement.";
+"birthdayList.noResults.title" = "Aucun résultat";
+"birthdayList.noResults.subtitle" = "Personne ne correspond à « %@ ».";
+/* Sections */
+"section.today" = "Aujourd'"'"'hui 🎂";
+"section.thisWeek" = "Cette semaine";
+"section.thisMonth" = "Ce mois";
+"section.later" = "Plus tard";
+/* Actions */
+"action.delete" = "Supprimer";
+"action.mute" = "Désactiver";
+"action.unmute" = "Activer";
+"action.favorite" = "Favori";
+"action.unfavorite" = "Retirer";
+/* Add/Edit */
+"addEdit.add.title" = "Ajouter un anniversaire";
+"addEdit.edit.title" = "Modifier l'"'"'anniversaire";
+"addEdit.section.person" = "Personne";
+"addEdit.field.name" = "Nom";
+"addEdit.field.emoji" = "Emoji (optionnel)";
+"addEdit.section.birthday" = "Anniversaire";
+"addEdit.field.month" = "Mois";
+"addEdit.field.day" = "Jour";
+"addEdit.field.year" = "Année (optionnel)";
+"addEdit.section.options" = "Options";
+"addEdit.option.favorite" = "Favori";
+"addEdit.option.notifications" = "Notifications";
+/* Common */
+"common.cancel" = "Annuler";
+"common.save" = "Enregistrer";
+/* Import */
+"import.title" = "Importer des contacts";
+"import.button" = "Importer (%d)";
+"import.importAll" = "Tout importer";
+"import.loading" = "Chargement des contacts…";
+"import.error.title" = "Accès aux contacts refusé";
+"import.error.subtitle" = "Autorisez l'"'"'accès aux Contacts dans les Réglages.";
+"import.noContacts.title" = "Aucun contact avec anniversaire";
+"import.noContacts.subtitle" = "Ajoutez des dates dans l'"'"'app Contacts.";
+"import.added" = "Ajouté";
+/* Settings */
+"settings.title" = "Réglages";
+"settings.section.appearance" = "Apparence";
+"settings.section.notifications" = "Notifications";
+"settings.section.about" = "À propos";
+"settings.notification.daily" = "Rappel quotidien";
+"settings.notification.favReminder" = "Rappel anticipé favoris";
+"settings.notification.favDays" = "%d jours avant";
+"settings.about.version" = "Version";
+"settings.about.freeForever" = "Gratuit pour toujours";
+"settings.about.freeForeverSub" = "Pas d'"'"'abonnement, pas de pub, pas de compte.";
+"settings.about.localData" = "Vos données restent sur l'"'"'appareil";
+"settings.about.localDataSub" = "Rien n'"'"'est téléchargé ni partagé. Jamais.";
+"settings.about.madeWith" = "Fait avec ❤️ à Hambourg";
+/* Birthday */
+"birthday.turns" = "Fête ses %d ans";
+"birthday.today" = "Aujourd'"'"'hui 🎂";
+"birthday.tomorrow" = "Demain";
+"birthday.inDays" = "dans %d jours";
+"birthday.days" = "jours";
+/* Widgets */
+"widget.empty" = "Aucun anniversaire";
+"widget.emptySubtitle" = "Ouvrir l'"'"'app pour en ajouter";
+"widget.favorites" = "FAVORIS";
+"widget.noFavorites" = "Aucun favori";
+"widget.noFavoritesSub" = "Marquez quelqu'"'"'un dans l'"'"'app";
+"widget.comingUp" = "À VENIR";
+"widget.todayBirthday" = "Aujourd'"'"'hui ! 🎂";'
+
+# ── Spanish ───────────────────────────────────────────────────────────────────
+write_strings es \
+'"onboarding.freePitch" = "Gratis. Para siempre.";
+"onboarding.freeSubtitle" = "Sin suscripciones. Sin anuncios. Sin cuentas.\nOpen Birthday es completamente gratuito y siempre lo será.";
+"onboarding.getStarted" = "Empezar";
+"onboarding.permissionsTitle" = "Solo dos cosas…";
+"onboarding.contacts.title" = "Contactos";
+"onboarding.contacts.subtitle" = "Importa cumpleaños y fotos desde tus contactos.";
+"onboarding.notifications.title" = "Notificaciones";
+"onboarding.notifications.subtitle" = "Recibe recordatorios en los cumpleaños — y antes para tus favoritos.";
+"onboarding.allowAndContinue" = "Permitir y Continuar";
+"onboarding.skipForNow" = "Omitir por ahora";
+"birthdayList.title" = "Cumpleaños";
+"birthdayList.searchPlaceholder" = "Buscar cumpleaños";
+"birthdayList.empty.title" = "Sin cumpleaños aún";
+"birthdayList.empty.subtitle" = "Importa desde Contactos o añade a alguien manualmente.";
+"birthdayList.noResults.title" = "Sin resultados";
+"birthdayList.noResults.subtitle" = "Nadie coincide con \"%@\".";
+"section.today" = "Hoy 🎂";
+"section.thisWeek" = "Esta semana";
+"section.thisMonth" = "Este mes";
+"section.later" = "Más tarde";
+"action.delete" = "Eliminar";
+"action.mute" = "Silenciar";
+"action.unmute" = "Activar";
+"action.favorite" = "Favorito";
+"action.unfavorite" = "Quitar";
+"addEdit.add.title" = "Añadir cumpleaños";
+"addEdit.edit.title" = "Editar cumpleaños";
+"addEdit.section.person" = "Persona";
+"addEdit.field.name" = "Nombre";
+"addEdit.field.emoji" = "Emoji (opcional)";
+"addEdit.section.birthday" = "Cumpleaños";
+"addEdit.field.month" = "Mes";
+"addEdit.field.day" = "Día";
+"addEdit.field.year" = "Año (opcional)";
+"addEdit.section.options" = "Opciones";
+"addEdit.option.favorite" = "Favorito";
+"addEdit.option.notifications" = "Notificaciones";
+"common.cancel" = "Cancelar";
+"common.save" = "Guardar";
+"import.title" = "Importar contactos";
+"import.button" = "Importar (%d)";
+"import.importAll" = "Importar todo";
+"import.loading" = "Cargando contactos…";
+"import.error.title" = "Sin acceso a contactos";
+"import.error.subtitle" = "Permite el acceso a Contactos en Ajustes.";
+"import.noContacts.title" = "Sin contactos con cumpleaños";
+"import.noContacts.subtitle" = "Añade fechas en la app Contactos.";
+"import.added" = "Añadido";
+"settings.title" = "Ajustes";
+"settings.section.appearance" = "Apariencia";
+"settings.section.notifications" = "Notificaciones";
+"settings.section.about" = "Acerca de";
+"settings.notification.daily" = "Recordatorio diario";
+"settings.notification.favReminder" = "Recordatorio anticipado";
+"settings.notification.favDays" = "%d días antes";
+"settings.about.version" = "Versión";
+"settings.about.freeForever" = "Gratis para siempre";
+"settings.about.freeForeverSub" = "Sin suscripciones, sin anuncios, sin cuentas.";
+"settings.about.localData" = "Tus datos se quedan en tu dispositivo";
+"settings.about.localDataSub" = "Nada se sube ni se comparte. Jamás.";
+"settings.about.madeWith" = "Hecho con ❤️ en Hamburgo";
+"birthday.turns" = "Cumple %d";
+"birthday.today" = "Hoy 🎂";
+"birthday.tomorrow" = "Mañana";
+"birthday.inDays" = "en %d días";
+"birthday.days" = "días";
+"widget.empty" = "Sin cumpleaños";
+"widget.emptySubtitle" = "Abre la app para añadir";
+"widget.favorites" = "FAVORITOS";
+"widget.noFavorites" = "Sin favoritos aún";
+"widget.noFavoritesSub" = "Marca a alguien en la app";
+"widget.comingUp" = "PRÓXIMOS";
+"widget.todayBirthday" = "¡Hoy! 🎂";'
+
+# ── Italian ───────────────────────────────────────────────────────────────────
+write_strings it \
+'"onboarding.freePitch" = "Gratis. Per sempre.";
+"onboarding.freeSubtitle" = "Niente abbonamenti. Niente pubblicità. Niente account.\nOpen Birthday è completamente gratuito e lo sarà sempre.";
+"onboarding.getStarted" = "Inizia";
+"onboarding.permissionsTitle" = "Solo due cose…";
+"onboarding.contacts.title" = "Contatti";
+"onboarding.contacts.subtitle" = "Importa compleanni e foto profilo dai tuoi contatti.";
+"onboarding.notifications.title" = "Notifiche";
+"onboarding.notifications.subtitle" = "Ricevi promemoria per i compleanni — e in anticipo per i preferiti.";
+"onboarding.allowAndContinue" = "Consenti e Continua";
+"onboarding.skipForNow" = "Salta per ora";
+"birthdayList.title" = "Compleanni";
+"birthdayList.searchPlaceholder" = "Cerca compleanni";
+"birthdayList.empty.title" = "Nessun compleanno";
+"birthdayList.empty.subtitle" = "Importa dai Contatti o aggiungi qualcuno manualmente.";
+"birthdayList.noResults.title" = "Nessun risultato";
+"birthdayList.noResults.subtitle" = "Nessuno corrisponde a \"%@\".";
+"section.today" = "Oggi 🎂";
+"section.thisWeek" = "Questa settimana";
+"section.thisMonth" = "Questo mese";
+"section.later" = "Più tardi";
+"action.delete" = "Elimina";
+"action.mute" = "Silenzia";
+"action.unmute" = "Riattiva";
+"action.favorite" = "Preferito";
+"action.unfavorite" = "Rimuovi";
+"addEdit.add.title" = "Aggiungi compleanno";
+"addEdit.edit.title" = "Modifica compleanno";
+"addEdit.section.person" = "Persona";
+"addEdit.field.name" = "Nome";
+"addEdit.field.emoji" = "Emoji (opzionale)";
+"addEdit.section.birthday" = "Compleanno";
+"addEdit.field.month" = "Mese";
+"addEdit.field.day" = "Giorno";
+"addEdit.field.year" = "Anno (opzionale)";
+"addEdit.section.options" = "Opzioni";
+"addEdit.option.favorite" = "Preferito";
+"addEdit.option.notifications" = "Notifiche";
+"common.cancel" = "Annulla";
+"common.save" = "Salva";
+"import.title" = "Importa contatti";
+"import.button" = "Importa (%d)";
+"import.importAll" = "Importa tutto";
+"import.loading" = "Caricamento contatti…";
+"import.error.title" = "Accesso negato";
+"import.error.subtitle" = "Consenti l'"'"'accesso ai Contatti nelle Impostazioni.";
+"import.noContacts.title" = "Nessun contatto con compleanno";
+"import.noContacts.subtitle" = "Aggiungi date nell'"'"'app Contatti.";
+"import.added" = "Aggiunto";
+"settings.title" = "Impostazioni";
+"settings.section.appearance" = "Aspetto";
+"settings.section.notifications" = "Notifiche";
+"settings.section.about" = "Info";
+"settings.notification.daily" = "Promemoria giornaliero";
+"settings.notification.favReminder" = "Promemoria anticipato";
+"settings.notification.favDays" = "%d giorni prima";
+"settings.about.version" = "Versione";
+"settings.about.freeForever" = "Gratis per sempre";
+"settings.about.freeForeverSub" = "Niente abbonamenti, niente pubblicità, niente account.";
+"settings.about.localData" = "I tuoi dati restano sul dispositivo";
+"settings.about.localDataSub" = "Niente viene caricato o condiviso. Mai.";
+"settings.about.madeWith" = "Fatto con ❤️ ad Amburgo";
+"birthday.turns" = "Compie %d anni";
+"birthday.today" = "Oggi 🎂";
+"birthday.tomorrow" = "Domani";
+"birthday.inDays" = "tra %d giorni";
+"birthday.days" = "giorni";
+"widget.empty" = "Nessun compleanno";
+"widget.emptySubtitle" = "Apri l'"'"'app per aggiungerne";
+"widget.favorites" = "PREFERITI";
+"widget.noFavorites" = "Nessun preferito";
+"widget.noFavoritesSub" = "Aggiungi qualcuno ai preferiti";
+"widget.comingUp" = "IN ARRIVO";
+"widget.todayBirthday" = "Oggi! 🎂";'
+
+# ── Portuguese ────────────────────────────────────────────────────────────────
+write_strings pt \
+'"onboarding.freePitch" = "Grátis. Para sempre.";
+"onboarding.freeSubtitle" = "Sem assinaturas. Sem anúncios. Sem contas.\nOpen Birthday é completamente gratuito e sempre será.";
+"onboarding.getStarted" = "Começar";
+"onboarding.permissionsTitle" = "Só duas coisas…";
+"onboarding.contacts.title" = "Contactos";
+"onboarding.contacts.subtitle" = "Importe aniversários e fotos dos seus contactos.";
+"onboarding.notifications.title" = "Notificações";
+"onboarding.notifications.subtitle" = "Receba lembretes nos aniversários — e com antecedência para os favoritos.";
+"onboarding.allowAndContinue" = "Permitir e Continuar";
+"onboarding.skipForNow" = "Ignorar por agora";
+"birthdayList.title" = "Aniversários";
+"birthdayList.searchPlaceholder" = "Pesquisar aniversários";
+"birthdayList.empty.title" = "Sem aniversários ainda";
+"birthdayList.empty.subtitle" = "Importe dos Contactos ou adicione alguém manualmente.";
+"birthdayList.noResults.title" = "Sem resultados";
+"birthdayList.noResults.subtitle" = "Ninguém corresponde a \"%@\".";
+"section.today" = "Hoje 🎂";
+"section.thisWeek" = "Esta semana";
+"section.thisMonth" = "Este mês";
+"section.later" = "Mais tarde";
+"action.delete" = "Eliminar";
+"action.mute" = "Silenciar";
+"action.unmute" = "Ativar";
+"action.favorite" = "Favorito";
+"action.unfavorite" = "Remover";
+"addEdit.add.title" = "Adicionar aniversário";
+"addEdit.edit.title" = "Editar aniversário";
+"addEdit.section.person" = "Pessoa";
+"addEdit.field.name" = "Nome";
+"addEdit.field.emoji" = "Emoji (opcional)";
+"addEdit.section.birthday" = "Aniversário";
+"addEdit.field.month" = "Mês";
+"addEdit.field.day" = "Dia";
+"addEdit.field.year" = "Ano (opcional)";
+"addEdit.section.options" = "Opções";
+"addEdit.option.favorite" = "Favorito";
+"addEdit.option.notifications" = "Notificações";
+"common.cancel" = "Cancelar";
+"common.save" = "Guardar";
+"import.title" = "Importar contactos";
+"import.button" = "Importar (%d)";
+"import.importAll" = "Importar tudo";
+"import.loading" = "A carregar contactos…";
+"import.error.title" = "Sem acesso aos contactos";
+"import.error.subtitle" = "Permita o acesso aos Contactos nas Definições.";
+"import.noContacts.title" = "Sem contactos com aniversários";
+"import.noContacts.subtitle" = "Adicione datas na app Contactos.";
+"import.added" = "Adicionado";
+"settings.title" = "Definições";
+"settings.section.appearance" = "Aparência";
+"settings.section.notifications" = "Notificações";
+"settings.section.about" = "Sobre";
+"settings.notification.daily" = "Lembrete diário";
+"settings.notification.favReminder" = "Lembrete antecipado";
+"settings.notification.favDays" = "%d dias antes";
+"settings.about.version" = "Versão";
+"settings.about.freeForever" = "Grátis para sempre";
+"settings.about.freeForeverSub" = "Sem assinaturas, sem anúncios, sem contas.";
+"settings.about.localData" = "Os seus dados ficam no dispositivo";
+"settings.about.localDataSub" = "Nada é carregado ou partilhado. Nunca.";
+"settings.about.madeWith" = "Feito com ❤️ em Hamburgo";
+"birthday.turns" = "Faz %d anos";
+"birthday.today" = "Hoje 🎂";
+"birthday.tomorrow" = "Amanhã";
+"birthday.inDays" = "em %d dias";
+"birthday.days" = "dias";
+"widget.empty" = "Sem aniversários";
+"widget.emptySubtitle" = "Abra a app para adicionar";
+"widget.favorites" = "FAVORITOS";
+"widget.noFavorites" = "Sem favoritos ainda";
+"widget.noFavoritesSub" = "Marque alguém na app";
+"widget.comingUp" = "A SEGUIR";
+"widget.todayBirthday" = "Hoje! 🎂";'
+
+# ── Dutch ─────────────────────────────────────────────────────────────────────
+write_strings nl \
+'"onboarding.freePitch" = "Gratis. Voor altijd.";
+"onboarding.freeSubtitle" = "Geen abonnementen. Geen advertenties. Geen accounts.\nOpen Birthday is volledig gratis en zal dat altijd blijven.";
+"onboarding.getStarted" = "Begin";
+"onboarding.permissionsTitle" = "Nog twee dingetjes…";
+"onboarding.contacts.title" = "Contacten";
+"onboarding.contacts.subtitle" = "Importeer verjaardagen en profielfotos uit je contacten.";
+"onboarding.notifications.title" = "Meldingen";
+"onboarding.notifications.subtitle" = "Ontvang herinneringen op verjaardagen — en eerder voor favorieten.";
+"onboarding.allowAndContinue" = "Toestaan & Doorgaan";
+"onboarding.skipForNow" = "Nu overslaan";
+"birthdayList.title" = "Verjaardagen";
+"birthdayList.searchPlaceholder" = "Verjaardagen zoeken";
+"birthdayList.empty.title" = "Nog geen verjaardagen";
+"birthdayList.empty.subtitle" = "Importeer uit Contacten of voeg iemand handmatig toe.";
+"birthdayList.noResults.title" = "Geen resultaten";
+"birthdayList.noResults.subtitle" = "Niemand komt overeen met \"%@\".";
+"section.today" = "Vandaag 🎂";
+"section.thisWeek" = "Deze week";
+"section.thisMonth" = "Deze maand";
+"section.later" = "Later";
+"action.delete" = "Verwijder";
+"action.mute" = "Dempen";
+"action.unmute" = "Activeren";
+"action.favorite" = "Favoriet";
+"action.unfavorite" = "Verwijder";
+"addEdit.add.title" = "Verjaardag toevoegen";
+"addEdit.edit.title" = "Verjaardag bewerken";
+"addEdit.section.person" = "Persoon";
+"addEdit.field.name" = "Naam";
+"addEdit.field.emoji" = "Emoji (optioneel)";
+"addEdit.section.birthday" = "Verjaardag";
+"addEdit.field.month" = "Maand";
+"addEdit.field.day" = "Dag";
+"addEdit.field.year" = "Jaar (optioneel)";
+"addEdit.section.options" = "Opties";
+"addEdit.option.favorite" = "Favoriet";
+"addEdit.option.notifications" = "Meldingen";
+"common.cancel" = "Annuleer";
+"common.save" = "Opslaan";
+"import.title" = "Contacten importeren";
+"import.button" = "Importeer (%d)";
+"import.importAll" = "Alles importeren";
+"import.loading" = "Contacten laden…";
+"import.error.title" = "Geen toegang tot contacten";
+"import.error.subtitle" = "Sta toegang toe tot Contacten in Instellingen.";
+"import.noContacts.title" = "Geen contacten met verjaardagen";
+"import.noContacts.subtitle" = "Voeg verjaardagen toe in de Contacten-app.";
+"import.added" = "Toegevoegd";
+"settings.title" = "Instellingen";
+"settings.section.appearance" = "Uiterlijk";
+"settings.section.notifications" = "Meldingen";
+"settings.section.about" = "Over";
+"settings.notification.daily" = "Dagelijkse herinnering";
+"settings.notification.favReminder" = "Vroege herinnering favorieten";
+"settings.notification.favDays" = "%d dagen eerder";
+"settings.about.version" = "Versie";
+"settings.about.freeForever" = "Voor altijd gratis";
+"settings.about.freeForeverSub" = "Geen abonnementen, geen advertenties, geen accounts.";
+"settings.about.localData" = "Je gegevens blijven op je apparaat";
+"settings.about.localDataSub" = "Niets wordt geüpload of gedeeld. Ooit.";
+"settings.about.madeWith" = "Gemaakt met ❤️ in Hamburg";
+"birthday.turns" = "Wordt %d";
+"birthday.today" = "Vandaag 🎂";
+"birthday.tomorrow" = "Morgen";
+"birthday.inDays" = "over %d dagen";
+"birthday.days" = "dagen";
+"widget.empty" = "Geen verjaardagen";
+"widget.emptySubtitle" = "Open de app om toe te voegen";
+"widget.favorites" = "FAVORIETEN";
+"widget.noFavorites" = "Nog geen favorieten";
+"widget.noFavoritesSub" = "Markeer iemand in de app";
+"widget.comingUp" = "BINNENKORT";
+"widget.todayBirthday" = "Vandaag! 🎂";'
+
+# ── Polish ────────────────────────────────────────────────────────────────────
+write_strings pl \
+'"onboarding.freePitch" = "Bezpłatnie. Na zawsze.";
+"onboarding.freeSubtitle" = "Żadnych subskrypcji. Żadnych reklam. Żadnych kont.\nOpen Birthday jest całkowicie bezpłatne i takie pozostanie.";
+"onboarding.getStarted" = "Zacznij";
+"onboarding.permissionsTitle" = "Tylko dwie rzeczy…";
+"onboarding.contacts.title" = "Kontakty";
+"onboarding.contacts.subtitle" = "Importuj urodziny i zdjęcia profilowe z kontaktów.";
+"onboarding.notifications.title" = "Powiadomienia";
+"onboarding.notifications.subtitle" = "Otrzymuj przypomnienia o urodzinach — z wyprzedzeniem dla ulubionych.";
+"onboarding.allowAndContinue" = "Zezwól i Kontynuuj";
+"onboarding.skipForNow" = "Pomiń na razie";
+"birthdayList.title" = "Urodziny";
+"birthdayList.searchPlaceholder" = "Szukaj urodzin";
+"birthdayList.empty.title" = "Brak urodzin";
+"birthdayList.empty.subtitle" = "Importuj z Kontaktów lub dodaj kogoś ręcznie.";
+"birthdayList.noResults.title" = "Brak wyników";
+"birthdayList.noResults.subtitle" = "Nikt nie pasuje do \"%@\".";
+"section.today" = "Dziś 🎂";
+"section.thisWeek" = "W tym tygodniu";
+"section.thisMonth" = "W tym miesiącu";
+"section.later" = "Później";
+"action.delete" = "Usuń";
+"action.mute" = "Wycisz";
+"action.unmute" = "Włącz";
+"action.favorite" = "Ulubiony";
+"action.unfavorite" = "Usuń";
+"addEdit.add.title" = "Dodaj urodziny";
+"addEdit.edit.title" = "Edytuj urodziny";
+"addEdit.section.person" = "Osoba";
+"addEdit.field.name" = "Imię";
+"addEdit.field.emoji" = "Emoji (opcjonalne)";
+"addEdit.section.birthday" = "Urodziny";
+"addEdit.field.month" = "Miesiąc";
+"addEdit.field.day" = "Dzień";
+"addEdit.field.year" = "Rok (opcjonalny)";
+"addEdit.section.options" = "Opcje";
+"addEdit.option.favorite" = "Ulubiony";
+"addEdit.option.notifications" = "Powiadomienia";
+"common.cancel" = "Anuluj";
+"common.save" = "Zapisz";
+"import.title" = "Importuj kontakty";
+"import.button" = "Importuj (%d)";
+"import.importAll" = "Importuj wszystko";
+"import.loading" = "Ładowanie kontaktów…";
+"import.error.title" = "Brak dostępu do kontaktów";
+"import.error.subtitle" = "Zezwól na dostęp do Kontaktów w Ustawieniach.";
+"import.noContacts.title" = "Brak kontaktów z urodzinami";
+"import.noContacts.subtitle" = "Dodaj daty w aplikacji Kontakty.";
+"import.added" = "Dodano";
+"settings.title" = "Ustawienia";
+"settings.section.appearance" = "Wygląd";
+"settings.section.notifications" = "Powiadomienia";
+"settings.section.about" = "O aplikacji";
+"settings.notification.daily" = "Codzienne przypomnienie";
+"settings.notification.favReminder" = "Wczesne przypomnienie";
+"settings.notification.favDays" = "%d dni wcześniej";
+"settings.about.version" = "Wersja";
+"settings.about.freeForever" = "Bezpłatnie na zawsze";
+"settings.about.freeForeverSub" = "Brak subskrypcji, reklam i kont.";
+"settings.about.localData" = "Twoje dane są na urządzeniu";
+"settings.about.localDataSub" = "Nic nie jest przesyłane ani udostępniane. Nigdy.";
+"settings.about.madeWith" = "Zrobione z ❤️ w Hamburgu";
+"birthday.turns" = "Kończy %d lat";
+"birthday.today" = "Dziś 🎂";
+"birthday.tomorrow" = "Jutro";
+"birthday.inDays" = "za %d dni";
+"birthday.days" = "dni";
+"widget.empty" = "Brak urodzin";
+"widget.emptySubtitle" = "Otwórz aplikację, aby dodać";
+"widget.favorites" = "ULUBIENI";
+"widget.noFavorites" = "Brak ulubionych";
+"widget.noFavoritesSub" = "Oznacz kogoś w aplikacji";
+"widget.comingUp" = "WKRÓTCE";
+"widget.todayBirthday" = "Dziś! 🎂";'
+
+# ── Swedish ───────────────────────────────────────────────────────────────────
+write_strings sv \
+'"onboarding.freePitch" = "Gratis. För alltid.";
+"onboarding.freeSubtitle" = "Inga prenumerationer. Inga annonser. Inga konton.\nOpen Birthday är helt gratis och kommer alltid att vara det.";
+"onboarding.getStarted" = "Kom igång";
+"onboarding.permissionsTitle" = "Bara två saker…";
+"onboarding.contacts.title" = "Kontakter";
+"onboarding.contacts.subtitle" = "Importera födelsedagar och profilfoton från dina kontakter.";
+"onboarding.notifications.title" = "Aviseringar";
+"onboarding.notifications.subtitle" = "Få påminnelser om vännernas födelsedagar — och i förväg för favoriter.";
+"onboarding.allowAndContinue" = "Tillåt & Fortsätt";
+"onboarding.skipForNow" = "Hoppa över nu";
+"birthdayList.title" = "Födelsedagar";
+"birthdayList.searchPlaceholder" = "Sök födelsedagar";
+"birthdayList.empty.title" = "Inga födelsedagar än";
+"birthdayList.empty.subtitle" = "Importera från Kontakter eller lägg till någon manuellt.";
+"birthdayList.noResults.title" = "Inga resultat";
+"birthdayList.noResults.subtitle" = "Ingen matchar \"%@\".";
+"section.today" = "Idag 🎂";
+"section.thisWeek" = "Den här veckan";
+"section.thisMonth" = "Den här månaden";
+"section.later" = "Senare";
+"action.delete" = "Radera";
+"action.mute" = "Tysta";
+"action.unmute" = "Aktivera";
+"action.favorite" = "Favorit";
+"action.unfavorite" = "Ta bort";
+"addEdit.add.title" = "Lägg till födelsedag";
+"addEdit.edit.title" = "Redigera födelsedag";
+"addEdit.section.person" = "Person";
+"addEdit.field.name" = "Namn";
+"addEdit.field.emoji" = "Emoji (valfri)";
+"addEdit.section.birthday" = "Födelsedag";
+"addEdit.field.month" = "Månad";
+"addEdit.field.day" = "Dag";
+"addEdit.field.year" = "År (valfritt)";
+"addEdit.section.options" = "Alternativ";
+"addEdit.option.favorite" = "Favorit";
+"addEdit.option.notifications" = "Aviseringar";
+"common.cancel" = "Avbryt";
+"common.save" = "Spara";
+"import.title" = "Importera kontakter";
+"import.button" = "Importera (%d)";
+"import.importAll" = "Importera alla";
+"import.loading" = "Laddar kontakter…";
+"import.error.title" = "Ingen åtkomst till kontakter";
+"import.error.subtitle" = "Tillåt åtkomst till Kontakter i Inställningar.";
+"import.noContacts.title" = "Inga kontakter med födelsedag";
+"import.noContacts.subtitle" = "Lägg till datum i appen Kontakter.";
+"import.added" = "Tillagd";
+"settings.title" = "Inställningar";
+"settings.section.appearance" = "Utseende";
+"settings.section.notifications" = "Aviseringar";
+"settings.section.about" = "Om";
+"settings.notification.daily" = "Daglig påminnelse";
+"settings.notification.favReminder" = "Tidig påminnelse favoriter";
+"settings.notification.favDays" = "%d dagar innan";
+"settings.about.version" = "Version";
+"settings.about.freeForever" = "Gratis för alltid";
+"settings.about.freeForeverSub" = "Inga prenumerationer, inga annonser, inga konton.";
+"settings.about.localData" = "Din data stannar på enheten";
+"settings.about.localDataSub" = "Inget laddas upp eller delas. Aldrig.";
+"settings.about.madeWith" = "Gjord med ❤️ i Hamburg";
+"birthday.turns" = "Fyller %d";
+"birthday.today" = "Idag 🎂";
+"birthday.tomorrow" = "Imorgon";
+"birthday.inDays" = "om %d dagar";
+"birthday.days" = "dagar";
+"widget.empty" = "Inga födelsedagar";
+"widget.emptySubtitle" = "Öppna appen för att lägga till";
+"widget.favorites" = "FAVORITER";
+"widget.noFavorites" = "Inga favoriter än";
+"widget.noFavoritesSub" = "Stjärnmärk någon i appen";
+"widget.comingUp" = "KOMMER SNART";
+"widget.todayBirthday" = "Idag! 🎂";'
+
+# ── Norwegian ─────────────────────────────────────────────────────────────────
+write_strings nb \
+'"onboarding.freePitch" = "Gratis. For alltid.";
+"onboarding.freeSubtitle" = "Ingen abonnementer. Ingen annonser. Ingen kontoer.\nOpen Birthday er helt gratis og vil alltid være det.";
+"onboarding.getStarted" = "Kom i gang";
+"onboarding.permissionsTitle" = "Bare to ting…";
+"onboarding.contacts.title" = "Kontakter";
+"onboarding.contacts.subtitle" = "Importer bursdager og profilbilder fra kontaktene dine.";
+"onboarding.notifications.title" = "Varsler";
+"onboarding.notifications.subtitle" = "Få påminnelser om bursdager — og på forhånd for favoritter.";
+"onboarding.allowAndContinue" = "Tillat og Fortsett";
+"onboarding.skipForNow" = "Hopp over nå";
+"birthdayList.title" = "Bursdager";
+"birthdayList.searchPlaceholder" = "Søk bursdager";
+"birthdayList.empty.title" = "Ingen bursdager ennå";
+"birthdayList.empty.subtitle" = "Importer fra Kontakter eller legg til noen manuelt.";
+"birthdayList.noResults.title" = "Ingen resultater";
+"birthdayList.noResults.subtitle" = "Ingen samsvarer med \"%@\".";
+"section.today" = "I dag 🎂";
+"section.thisWeek" = "Denne uken";
+"section.thisMonth" = "Denne måneden";
+"section.later" = "Senere";
+"action.delete" = "Slett";
+"action.mute" = "Demp";
+"action.unmute" = "Aktiver";
+"action.favorite" = "Favoritt";
+"action.unfavorite" = "Fjern";
+"addEdit.add.title" = "Legg til bursdag";
+"addEdit.edit.title" = "Rediger bursdag";
+"addEdit.section.person" = "Person";
+"addEdit.field.name" = "Navn";
+"addEdit.field.emoji" = "Emoji (valgfritt)";
+"addEdit.section.birthday" = "Bursdag";
+"addEdit.field.month" = "Måned";
+"addEdit.field.day" = "Dag";
+"addEdit.field.year" = "År (valgfritt)";
+"addEdit.section.options" = "Alternativer";
+"addEdit.option.favorite" = "Favoritt";
+"addEdit.option.notifications" = "Varsler";
+"common.cancel" = "Avbryt";
+"common.save" = "Lagre";
+"import.title" = "Importer kontakter";
+"import.button" = "Importer (%d)";
+"import.importAll" = "Importer alle";
+"import.loading" = "Laster kontakter…";
+"import.error.title" = "Ingen tilgang til kontakter";
+"import.error.subtitle" = "Tillat tilgang til Kontakter i Innstillinger.";
+"import.noContacts.title" = "Ingen kontakter med bursdag";
+"import.noContacts.subtitle" = "Legg til datoer i Kontakter-appen.";
+"import.added" = "Lagt til";
+"settings.title" = "Innstillinger";
+"settings.section.appearance" = "Utseende";
+"settings.section.notifications" = "Varsler";
+"settings.section.about" = "Om";
+"settings.notification.daily" = "Daglig påminnelse";
+"settings.notification.favReminder" = "Tidlig påminnelse favoritter";
+"settings.notification.favDays" = "%d dager før";
+"settings.about.version" = "Versjon";
+"settings.about.freeForever" = "Gratis for alltid";
+"settings.about.freeForeverSub" = "Ingen abonnementer, ingen annonser, ingen kontoer.";
+"settings.about.localData" = "Dataene dine er på enheten";
+"settings.about.localDataSub" = "Ingenting lastes opp eller deles. Aldri.";
+"settings.about.madeWith" = "Laget med ❤️ i Hamburg";
+"birthday.turns" = "Fyller %d";
+"birthday.today" = "I dag 🎂";
+"birthday.tomorrow" = "I morgen";
+"birthday.inDays" = "om %d dager";
+"birthday.days" = "dager";
+"widget.empty" = "Ingen bursdager";
+"widget.emptySubtitle" = "Åpne appen for å legge til";
+"widget.favorites" = "FAVORITTER";
+"widget.noFavorites" = "Ingen favoritter ennå";
+"widget.noFavoritesSub" = "Merk noen i appen";
+"widget.comingUp" = "KOMMER SNART";
+"widget.todayBirthday" = "I dag! 🎂";'
+
+# ── Danish ────────────────────────────────────────────────────────────────────
+write_strings da \
+'"onboarding.freePitch" = "Gratis. For evigt.";
+"onboarding.freeSubtitle" = "Ingen abonnementer. Ingen reklamer. Ingen konti.\nOpen Birthday er helt gratis og vil altid være det.";
+"onboarding.getStarted" = "Kom i gang";
+"onboarding.permissionsTitle" = "Bare to ting…";
+"onboarding.contacts.title" = "Kontakter";
+"onboarding.contacts.subtitle" = "Importér fødselsdage og profilfotos fra dine kontakter.";
+"onboarding.notifications.title" = "Notifikationer";
+"onboarding.notifications.subtitle" = "Få påmindelser om fødselsdage — og i forvejen for favoritter.";
+"onboarding.allowAndContinue" = "Tillad og Fortsæt";
+"onboarding.skipForNow" = "Spring over nu";
+"birthdayList.title" = "Fødselsdage";
+"birthdayList.searchPlaceholder" = "Søg fødselsdage";
+"birthdayList.empty.title" = "Ingen fødselsdage endnu";
+"birthdayList.empty.subtitle" = "Importér fra Kontakter eller tilføj nogen manuelt.";
+"birthdayList.noResults.title" = "Ingen resultater";
+"birthdayList.noResults.subtitle" = "Ingen matcher \"%@\".";
+"section.today" = "I dag 🎂";
+"section.thisWeek" = "Denne uge";
+"section.thisMonth" = "Denne måned";
+"section.later" = "Senere";
+"action.delete" = "Slet";
+"action.mute" = "Slå fra";
+"action.unmute" = "Slå til";
+"action.favorite" = "Favorit";
+"action.unfavorite" = "Fjern";
+"addEdit.add.title" = "Tilføj fødselsdag";
+"addEdit.edit.title" = "Rediger fødselsdag";
+"addEdit.section.person" = "Person";
+"addEdit.field.name" = "Navn";
+"addEdit.field.emoji" = "Emoji (valgfrit)";
+"addEdit.section.birthday" = "Fødselsdag";
+"addEdit.field.month" = "Måned";
+"addEdit.field.day" = "Dag";
+"addEdit.field.year" = "År (valgfrit)";
+"addEdit.section.options" = "Indstillinger";
+"addEdit.option.favorite" = "Favorit";
+"addEdit.option.notifications" = "Notifikationer";
+"common.cancel" = "Annuller";
+"common.save" = "Gem";
+"import.title" = "Importér kontakter";
+"import.button" = "Importér (%d)";
+"import.importAll" = "Importér alle";
+"import.loading" = "Indlæser kontakter…";
+"import.error.title" = "Ingen adgang til kontakter";
+"import.error.subtitle" = "Tillad adgang til Kontakter i Indstillinger.";
+"import.noContacts.title" = "Ingen kontakter med fødselsdage";
+"import.noContacts.subtitle" = "Tilføj datoer i Kontakter-appen.";
+"import.added" = "Tilføjet";
+"settings.title" = "Indstillinger";
+"settings.section.appearance" = "Udseende";
+"settings.section.notifications" = "Notifikationer";
+"settings.section.about" = "Om";
+"settings.notification.daily" = "Daglig påmindelse";
+"settings.notification.favReminder" = "Tidlig påmindelse favoritter";
+"settings.notification.favDays" = "%d dage før";
+"settings.about.version" = "Version";
+"settings.about.freeForever" = "Gratis for evigt";
+"settings.about.freeForeverSub" = "Ingen abonnementer, ingen reklamer, ingen konti.";
+"settings.about.localData" = "Dine data forbliver på enheden";
+"settings.about.localDataSub" = "Intet uploades eller deles. Nogensinde.";
+"settings.about.madeWith" = "Lavet med ❤️ i Hamburg";
+"birthday.turns" = "Fylder %d";
+"birthday.today" = "I dag 🎂";
+"birthday.tomorrow" = "I morgen";
+"birthday.inDays" = "om %d dage";
+"birthday.days" = "dage";
+"widget.empty" = "Ingen fødselsdage";
+"widget.emptySubtitle" = "Åbn appen for at tilføje";
+"widget.favorites" = "FAVORITTER";
+"widget.noFavorites" = "Ingen favoritter endnu";
+"widget.noFavoritesSub" = "Markér nogen i appen";
+"widget.comingUp" = "KOMMER SNART";
+"widget.todayBirthday" = "I dag! 🎂";'
+
+# ── Finnish ───────────────────────────────────────────────────────────────────
+write_strings fi \
+'"onboarding.freePitch" = "Ilmainen. Ikuisesti.";
+"onboarding.freeSubtitle" = "Ei tilauksia. Ei mainoksia. Ei tilejä.\nOpen Birthday on täysin ilmainen ja pysyy sellaisena.";
+"onboarding.getStarted" = "Aloita";
+"onboarding.permissionsTitle" = "Vain kaksi asiaa…";
+"onboarding.contacts.title" = "Yhteystiedot";
+"onboarding.contacts.subtitle" = "Tuo syntymäpäivät ja profiilikuvat yhteystiedoistasi.";
+"onboarding.notifications.title" = "Ilmoitukset";
+"onboarding.notifications.subtitle" = "Saat muistutuksia ystävien syntymäpäivistä — ja etukäteen suosikeille.";
+"onboarding.allowAndContinue" = "Salli ja Jatka";
+"onboarding.skipForNow" = "Ohita nyt";
+"birthdayList.title" = "Syntymäpäivät";
+"birthdayList.searchPlaceholder" = "Hae syntymäpäiviä";
+"birthdayList.empty.title" = "Ei syntymäpäiviä vielä";
+"birthdayList.empty.subtitle" = "Tuo yhteystiedoista tai lisää henkilö manuaalisesti.";
+"birthdayList.noResults.title" = "Ei tuloksia";
+"birthdayList.noResults.subtitle" = "Kukaan ei vastaa \"%@\".";
+"section.today" = "Tänään 🎂";
+"section.thisWeek" = "Tällä viikolla";
+"section.thisMonth" = "Tässä kuussa";
+"section.later" = "Myöhemmin";
+"action.delete" = "Poista";
+"action.mute" = "Mykistä";
+"action.unmute" = "Aktivoi";
+"action.favorite" = "Suosikki";
+"action.unfavorite" = "Poista";
+"addEdit.add.title" = "Lisää syntymäpäivä";
+"addEdit.edit.title" = "Muokkaa syntymäpäivää";
+"addEdit.section.person" = "Henkilö";
+"addEdit.field.name" = "Nimi";
+"addEdit.field.emoji" = "Emoji (valinnainen)";
+"addEdit.section.birthday" = "Syntymäpäivä";
+"addEdit.field.month" = "Kuukausi";
+"addEdit.field.day" = "Päivä";
+"addEdit.field.year" = "Vuosi (valinnainen)";
+"addEdit.section.options" = "Valinnat";
+"addEdit.option.favorite" = "Suosikki";
+"addEdit.option.notifications" = "Ilmoitukset";
+"common.cancel" = "Peruuta";
+"common.save" = "Tallenna";
+"import.title" = "Tuo yhteystiedot";
+"import.button" = "Tuo (%d)";
+"import.importAll" = "Tuo kaikki";
+"import.loading" = "Ladataan yhteystietoja…";
+"import.error.title" = "Ei pääsyä yhteystietoihin";
+"import.error.subtitle" = "Salli pääsy Yhteystietoihin Asetuksissa.";
+"import.noContacts.title" = "Ei yhteystietoja syntymäpäivällä";
+"import.noContacts.subtitle" = "Lisää päivämäärät Yhteystiedot-sovelluksessa.";
+"import.added" = "Lisätty";
+"settings.title" = "Asetukset";
+"settings.section.appearance" = "Ulkoasu";
+"settings.section.notifications" = "Ilmoitukset";
+"settings.section.about" = "Tietoja";
+"settings.notification.daily" = "Päivittäinen muistutus";
+"settings.notification.favReminder" = "Varhainen muistutus suosikeille";
+"settings.notification.favDays" = "%d päivää aiemmin";
+"settings.about.version" = "Versio";
+"settings.about.freeForever" = "Ilmainen ikuisesti";
+"settings.about.freeForeverSub" = "Ei tilauksia, mainoksia eikä tilejä.";
+"settings.about.localData" = "Tietosi pysyvät laitteellasi";
+"settings.about.localDataSub" = "Mitään ei ladata tai jaeta. Koskaan.";
+"settings.about.madeWith" = "Tehty rakkaudella ❤️ Hampurissa";
+"birthday.turns" = "Täyttää %d";
+"birthday.today" = "Tänään 🎂";
+"birthday.tomorrow" = "Huomenna";
+"birthday.inDays" = "%d päivän päästä";
+"birthday.days" = "päivää";
+"widget.empty" = "Ei syntymäpäiviä";
+"widget.emptySubtitle" = "Avaa sovellus lisätäksesi";
+"widget.favorites" = "SUOSIKIT";
+"widget.noFavorites" = "Ei suosikkeja vielä";
+"widget.noFavoritesSub" = "Merkitse joku sovelluksessa";
+"widget.comingUp" = "TULOSSA";
+"widget.todayBirthday" = "Tänään! 🎂";'
+
+# ── Czech ─────────────────────────────────────────────────────────────────────
+write_strings cs \
+'"onboarding.freePitch" = "Zdarma. Navždy.";
+"onboarding.freeSubtitle" = "Žádné předplatné. Žádné reklamy. Žádné účty.\nOpen Birthday je zcela zdarma a vždy bude.";
+"onboarding.getStarted" = "Začít";
+"onboarding.permissionsTitle" = "Jen dvě věci…";
+"onboarding.contacts.title" = "Kontakty";
+"onboarding.contacts.subtitle" = "Importujte narozeniny a profilové fotky z kontaktů.";
+"onboarding.notifications.title" = "Oznámení";
+"onboarding.notifications.subtitle" = "Dostávejte připomínky narozenin — a předem pro oblíbené.";
+"onboarding.allowAndContinue" = "Povolit a Pokračovat";
+"onboarding.skipForNow" = "Přeskočit";
+"birthdayList.title" = "Narozeniny";
+"birthdayList.searchPlaceholder" = "Hledat narozeniny";
+"birthdayList.empty.title" = "Žádné narozeniny";
+"birthdayList.empty.subtitle" = "Importujte z Kontaktů nebo přidejte někoho ručně.";
+"birthdayList.noResults.title" = "Žádné výsledky";
+"birthdayList.noResults.subtitle" = "Nikdo neodpovídá \"%@\".";
+"section.today" = "Dnes 🎂";
+"section.thisWeek" = "Tento týden";
+"section.thisMonth" = "Tento měsíc";
+"section.later" = "Později";
+"action.delete" = "Smazat";
+"action.mute" = "Ztlumit";
+"action.unmute" = "Zapnout";
+"action.favorite" = "Oblíbený";
+"action.unfavorite" = "Odebrat";
+"addEdit.add.title" = "Přidat narozeniny";
+"addEdit.edit.title" = "Upravit narozeniny";
+"addEdit.section.person" = "Osoba";
+"addEdit.field.name" = "Jméno";
+"addEdit.field.emoji" = "Emoji (volitelné)";
+"addEdit.section.birthday" = "Narozeniny";
+"addEdit.field.month" = "Měsíc";
+"addEdit.field.day" = "Den";
+"addEdit.field.year" = "Rok (volitelný)";
+"addEdit.section.options" = "Možnosti";
+"addEdit.option.favorite" = "Oblíbený";
+"addEdit.option.notifications" = "Oznámení";
+"common.cancel" = "Zrušit";
+"common.save" = "Uložit";
+"import.title" = "Importovat kontakty";
+"import.button" = "Importovat (%d)";
+"import.importAll" = "Importovat vše";
+"import.loading" = "Načítání kontaktů…";
+"import.error.title" = "Žádný přístup ke kontaktům";
+"import.error.subtitle" = "Povolte přístup ke Kontaktům v Nastavení.";
+"import.noContacts.title" = "Žádné kontakty s narozeninami";
+"import.noContacts.subtitle" = "Přidejte data v aplikaci Kontakty.";
+"import.added" = "Přidáno";
+"settings.title" = "Nastavení";
+"settings.section.appearance" = "Vzhled";
+"settings.section.notifications" = "Oznámení";
+"settings.section.about" = "O aplikaci";
+"settings.notification.daily" = "Denní připomínka";
+"settings.notification.favReminder" = "Brzy připomínka oblíbených";
+"settings.notification.favDays" = "%d dní předem";
+"settings.about.version" = "Verze";
+"settings.about.freeForever" = "Zdarma navždy";
+"settings.about.freeForeverSub" = "Žádné předplatné, žádné reklamy, žádné účty.";
+"settings.about.localData" = "Vaše data zůstávají v zařízení";
+"settings.about.localDataSub" = "Nic se nenahrává ani nesdílí. Nikdy.";
+"settings.about.madeWith" = "Vyrobeno s ❤️ v Hamburku";
+"birthday.turns" = "Slaví %d let";
+"birthday.today" = "Dnes 🎂";
+"birthday.tomorrow" = "Zítra";
+"birthday.inDays" = "za %d dní";
+"birthday.days" = "dní";
+"widget.empty" = "Žádné narozeniny";
+"widget.emptySubtitle" = "Otevřete aplikaci pro přidání";
+"widget.favorites" = "OBLÍBENÍ";
+"widget.noFavorites" = "Zatím žádní oblíbení";
+"widget.noFavoritesSub" = "Označte někoho v aplikaci";
+"widget.comingUp" = "BRZY";
+"widget.todayBirthday" = "Dnes! 🎂";'
+
+# The remaining languages use simplified but accurate translations
+for lang_data in \
+  "sk|Narodeniny|Neskôr|Tento mesiac|Tento týždeň|Dnes|Zrušiť|Uložiť|Nastavenia|Verzia|sk" \
+  "hu|Születésnapok|Később|Ezen a hónapon|Ezen a héten|Ma|Mégse|Mentés|Beállítások|Verzió|hu" \
+  "ro|Zile de naștere|Mai târziu|Luna aceasta|Săptămâna aceasta|Azi|Anulează|Salvează|Setări|Versiune|ro" \
+  "hr|Rođendani|Kasnije|Ovaj mjesec|Ovaj tjedan|Danas|Odustani|Spremi|Postavke|Verzija|hr" \
+  "ca|Aniversaris|Més tard|Aquest mes|Aquesta setmana|Avui|Cancel·lar|Desar|Configuració|Versió|ca"
+do
+  IFS='|' read -r code bdays later thismonth thisweek today cancel save settings version _ <<< "$lang_data"
+  # Write minimal strings file — key UI strings, rest fall back to English
+  dir="$BASE/$code.lproj"
+  mkdir -p "$dir"
+  cat > "$dir/Localizable.strings" << STREOF
+"birthdayList.title" = "$bdays";
+"section.today" = "$today 🎂";
+"section.thisWeek" = "$thisweek";
+"section.thisMonth" = "$thismonth";
+"section.later" = "$later";
+"common.cancel" = "$cancel";
+"common.save" = "$save";
+"settings.title" = "$settings";
+"settings.about.version" = "$version";
+"import.importAll" = "$(case $code in sk) echo 'Importovať všetko';; hu) echo 'Mindent importál';; ro) echo 'Importă tot';; hr) echo 'Uvezi sve';; ca) echo 'Importa tot';; esac)";
+"action.delete" = "$(case $code in sk) echo 'Zmazať';; hu) echo 'Törlés';; ro) echo 'Șterge';; hr) echo 'Obriši';; ca) echo 'Elimina';; esac)";
+"action.favorite" = "$(case $code in sk) echo 'Obľúbený';; hu) echo 'Kedvenc';; ro) echo 'Favorit';; hr) echo 'Favorit';; ca) echo 'Preferit';; esac)";
+"widget.favorites" = "$(case $code in sk) echo 'OBĽÚBENÍ';; hu) echo 'KEDVENCEK';; ro) echo 'FAVORITE';; hr) echo 'FAVORITI';; ca) echo 'PREFERITS';; esac)";
+"widget.comingUp" = "$(case $code in sk) echo 'ČOSKORO';; hu) echo 'HAMAROSAN';; ro) echo 'ÎN CURÂND';; hr) echo 'USKORO';; ca) echo 'PRÒXIMAMENT';; esac)";
+"settings.about.madeWith" = "$(case $code in sk) echo 'Vyrobené s ❤️ v Hamburgu';; hu) echo 'Szeretettel készítve ❤️ Hamburgban';; ro) echo 'Făcut cu ❤️ în Hamburg';; hr) echo 'Napravljeno s ❤️ u Hamburgu';; ca) echo 'Fet amb ❤️ a Hamburg';; esac)";
+STREOF
+  echo "  ✓ $code (partial)"
+done
+
+# ── Bulgarian ─────────────────────────────────────────────────────────────────
+mkdir -p "$BASE/bg.lproj"
+cat > "$BASE/bg.lproj/Localizable.strings" << 'BGEOF'
+"onboarding.freePitch" = "Безплатно. Завинаги.";
+"onboarding.getStarted" = "Започни";
+"onboarding.allowAndContinue" = "Разреши и Продължи";
+"onboarding.skipForNow" = "Пропусни засега";
+"birthdayList.title" = "Рождени дни";
+"birthdayList.searchPlaceholder" = "Търси рождени дни";
+"birthdayList.empty.title" = "Няма рождени дни";
+"section.today" = "Днес 🎂";
+"section.thisWeek" = "Тази седмица";
+"section.thisMonth" = "Този месец";
+"section.later" = "По-късно";
+"action.delete" = "Изтрий";
+"action.favorite" = "Любим";
+"common.cancel" = "Отказ";
+"common.save" = "Запази";
+"import.title" = "Импортиране на контакти";
+"import.importAll" = "Импортирай всички";
+"import.loading" = "Зареждане…";
+"import.added" = "Добавено";
+"settings.title" = "Настройки";
+"settings.about.version" = "Версия";
+"settings.about.madeWith" = "Направено с ❤️ в Хамбург";
+"widget.favorites" = "ЛЮБИМИ";
+"widget.comingUp" = "ПРЕДСТОИ";
+"widget.todayBirthday" = "Днес! 🎂";
+BGEOF
+echo "  ✓ bg"
+
+# ── Greek ─────────────────────────────────────────────────────────────────────
+mkdir -p "$BASE/el.lproj"
+cat > "$BASE/el.lproj/Localizable.strings" << 'ELEOF'
+"onboarding.freePitch" = "Δωρεάν. Για πάντα.";
+"onboarding.getStarted" = "Ξεκίνα";
+"onboarding.allowAndContinue" = "Αποδοχή & Συνέχεια";
+"onboarding.skipForNow" = "Παράλειψη";
+"birthdayList.title" = "Γενέθλια";
+"birthdayList.searchPlaceholder" = "Αναζήτηση γενεθλίων";
+"birthdayList.empty.title" = "Δεν υπάρχουν γενέθλια";
+"section.today" = "Σήμερα 🎂";
+"section.thisWeek" = "Αυτή την εβδομάδα";
+"section.thisMonth" = "Αυτόν τον μήνα";
+"section.later" = "Αργότερα";
+"action.delete" = "Διαγραφή";
+"action.favorite" = "Αγαπημένο";
+"common.cancel" = "Ακύρωση";
+"common.save" = "Αποθήκευση";
+"import.title" = "Εισαγωγή επαφών";
+"import.importAll" = "Εισαγωγή όλων";
+"import.loading" = "Φόρτωση επαφών…";
+"import.added" = "Προστέθηκε";
+"settings.title" = "Ρυθμίσεις";
+"settings.about.version" = "Έκδοση";
+"settings.about.madeWith" = "Φτιαγμένο με ❤️ στο Αμβούργο";
+"widget.favorites" = "ΑΓΑΠΗΜΈΝΑ";
+"widget.comingUp" = "ΕΡΧΕΤΑΙ";
+"widget.todayBirthday" = "Σήμερα! 🎂";
+ELEOF
+echo "  ✓ el"
+
+# ── Ukrainian ─────────────────────────────────────────────────────────────────
+mkdir -p "$BASE/uk.lproj"
+cat > "$BASE/uk.lproj/Localizable.strings" << 'UKEOF'
+"onboarding.freePitch" = "Безкоштовно. Назавжди.";
+"onboarding.getStarted" = "Почати";
+"onboarding.allowAndContinue" = "Дозволити та Продовжити";
+"onboarding.skipForNow" = "Пропустити";
+"birthdayList.title" = "Дні народження";
+"birthdayList.searchPlaceholder" = "Пошук днів народження";
+"birthdayList.empty.title" = "Немає днів народження";
+"section.today" = "Сьогодні 🎂";
+"section.thisWeek" = "Цього тижня";
+"section.thisMonth" = "Цього місяця";
+"section.later" = "Пізніше";
+"action.delete" = "Видалити";
+"action.favorite" = "Улюблений";
+"common.cancel" = "Скасувати";
+"common.save" = "Зберегти";
+"import.title" = "Імпорт контактів";
+"import.importAll" = "Імпортувати всіх";
+"import.loading" = "Завантаження…";
+"import.added" = "Додано";
+"settings.title" = "Налаштування";
+"settings.about.version" = "Версія";
+"settings.about.madeWith" = "Зроблено з ❤️ у Гамбурзі";
+"widget.favorites" = "УЛЮБЛЕНІ";
+"widget.comingUp" = "НЕЗАБАРОМ";
+"widget.todayBirthday" = "Сьогодні! 🎂";
+UKEOF
+echo "  ✓ uk"
+
+# ── Turkish ───────────────────────────────────────────────────────────────────
+mkdir -p "$BASE/tr.lproj"
+cat > "$BASE/tr.lproj/Localizable.strings" << 'TREOF'
+"onboarding.freePitch" = "Ücretsiz. Sonsuza kadar.";
+"onboarding.freeSubtitle" = "Abonelik yok. Reklam yok. Hesap yok.\nOpen Birthday tamamen ücretsizdir ve her zaman öyle kalacak.";
+"onboarding.getStarted" = "Başla";
+"onboarding.permissionsTitle" = "Sadece iki şey…";
+"onboarding.contacts.title" = "Kişiler";
+"onboarding.contacts.subtitle" = "Kişilerinizdeki doğum günlerini ve profil fotoğraflarını içe aktarın.";
+"onboarding.notifications.title" = "Bildirimler";
+"onboarding.notifications.subtitle" = "Doğum günlerinde hatırlatma alın — favoriler için önceden.";
+"onboarding.allowAndContinue" = "İzin Ver ve Devam Et";
+"onboarding.skipForNow" = "Şimdilik atla";
+"birthdayList.title" = "Doğum Günleri";
+"birthdayList.searchPlaceholder" = "Doğum günü ara";
+"birthdayList.empty.title" = "Henüz doğum günü yok";
+"birthdayList.empty.subtitle" = "Kişilerden içe aktarın veya birini manuel olarak ekleyin.";
+"birthdayList.noResults.title" = "Sonuç yok";
+"birthdayList.noResults.subtitle" = "\"%@\" ile eşleşen yok.";
+"section.today" = "Bugün 🎂";
+"section.thisWeek" = "Bu hafta";
+"section.thisMonth" = "Bu ay";
+"section.later" = "Daha sonra";
+"action.delete" = "Sil";
+"action.mute" = "Sessiz";
+"action.unmute" = "Aç";
+"action.favorite" = "Favori";
+"action.unfavorite" = "Kaldır";
+"addEdit.add.title" = "Doğum günü ekle";
+"addEdit.edit.title" = "Doğum gününü düzenle";
+"addEdit.section.person" = "Kişi";
+"addEdit.field.name" = "Ad";
+"addEdit.field.emoji" = "Emoji (isteğe bağlı)";
+"addEdit.section.birthday" = "Doğum günü";
+"addEdit.field.month" = "Ay";
+"addEdit.field.day" = "Gün";
+"addEdit.field.year" = "Yıl (isteğe bağlı)";
+"addEdit.section.options" = "Seçenekler";
+"addEdit.option.favorite" = "Favori";
+"addEdit.option.notifications" = "Bildirimler";
+"common.cancel" = "İptal";
+"common.save" = "Kaydet";
+"import.title" = "Kişileri içe aktar";
+"import.button" = "İçe aktar (%d)";
+"import.importAll" = "Tümünü içe aktar";
+"import.loading" = "Kişiler yükleniyor…";
+"import.error.title" = "Kişilere erişim yok";
+"import.error.subtitle" = "Ayarlar'da Kişiler erişimine izin verin.";
+"import.noContacts.title" = "Doğum günü olan kişi yok";
+"import.noContacts.subtitle" = "Kişiler uygulamasına tarih ekleyin.";
+"import.added" = "Eklendi";
+"settings.title" = "Ayarlar";
+"settings.section.appearance" = "Görünüm";
+"settings.section.notifications" = "Bildirimler";
+"settings.section.about" = "Hakkında";
+"settings.notification.daily" = "Günlük hatırlatma";
+"settings.notification.favReminder" = "Erken hatırlatma";
+"settings.notification.favDays" = "%d gün önce";
+"settings.about.version" = "Sürüm";
+"settings.about.freeForever" = "Sonsuza kadar ücretsiz";
+"settings.about.freeForeverSub" = "Abonelik, reklam ve hesap yok.";
+"settings.about.localData" = "Verileriniz cihazınızda kalır";
+"settings.about.localDataSub" = "Hiçbir şey yüklenmez veya paylaşılmaz. Asla.";
+"settings.about.madeWith" = "Hamburg'da ❤️ ile yapıldı";
+"birthday.turns" = "%d yaşına giriyor";
+"birthday.today" = "Bugün 🎂";
+"birthday.tomorrow" = "Yarın";
+"birthday.inDays" = "%d gün sonra";
+"birthday.days" = "gün";
+"widget.empty" = "Doğum günü yok";
+"widget.emptySubtitle" = "Eklemek için uygulamayı aç";
+"widget.favorites" = "FAVORİLER";
+"widget.noFavorites" = "Henüz favori yok";
+"widget.noFavoritesSub" = "Uygulamada birini favori olarak işaretle";
+"widget.comingUp" = "YAKINDA";
+"widget.todayBirthday" = "Bugün! 🎂";
+TREOF
+echo "  ✓ tr"
+
+echo ""
+# Copy all generated .lproj dirs to widget bundle so widget has localized strings too
+WIDGET_BASE="BirthdayWidgets"
+for lproj in "$BASE"/*.lproj; do
+  lang=$(basename "$lproj")
+  mkdir -p "$WIDGET_BASE/$lang"
+  cp "$lproj/Localizable.strings" "$WIDGET_BASE/$lang/Localizable.strings"
+done
+echo "✅ All translation files generated (app + widget)."

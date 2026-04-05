@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash:*)",
+      "Bash(xcodegen generate:*)",
+      "Bash(xcodebuild -project BirthdayCalendar.xcodeproj -scheme BirthdayCalendar -destination 'platform=iOS Simulator,name=iPhone 16' -configuration Debug build)",
+      "Bash(xcrun simctl:*)",
+      "Bash(xcodebuild -project BirthdayCalendar.xcodeproj -scheme BirthdayCalendar -destination 'platform=iOS Simulator,name=iPhone 17 Pro' -configuration Debug build)",
+      "Bash(ls BirthdayWidgets/*.lproj)",
+      "Bash(ls -d BirthdayWidgets/*.lproj)",
+      "Bash(python3 -c ':*)",
+      "Bash(python3:*)",
+      "Bash(plutil:*)"
+    ]
+  }
+}

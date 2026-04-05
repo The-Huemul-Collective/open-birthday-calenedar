@@ -1,0 +1,83 @@
+/* Onboarding */
+"onboarding.freePitch" = "Gratuit. Pour toujours.";
+"onboarding.freeSubtitle" = "Pas d'abonnement. Pas de pub. Pas de compte.\nOpen Birthday est entièrement gratuit et le restera toujours.";
+"onboarding.getStarted" = "Commencer";
+"onboarding.permissionsTitle" = "Juste deux choses…";
+"onboarding.contacts.title" = "Contacts";
+"onboarding.contacts.subtitle" = "Importez les anniversaires et photos depuis vos contacts.";
+"onboarding.notifications.title" = "Notifications";
+"onboarding.notifications.subtitle" = "Soyez rappelé des anniversaires — et en avance pour vos favoris.";
+"onboarding.allowAndContinue" = "Autoriser & Continuer";
+"onboarding.skipForNow" = "Passer pour l'instant";
+/* Birthday List */
+"birthdayList.title" = "Anniversaires";
+"birthdayList.searchPlaceholder" = "Rechercher";
+"birthdayList.empty.title" = "Aucun anniversaire";
+"birthdayList.empty.subtitle" = "Importez depuis Contacts ou ajoutez quelqu'un manuellement.";
+"birthdayList.noResults.title" = "Aucun résultat";
+"birthdayList.noResults.subtitle" = "Personne ne correspond à « %@ ».";
+/* Sections */
+"section.today" = "Aujourd'hui 🎂";
+"section.thisWeek" = "Cette semaine";
+"section.thisMonth" = "Ce mois";
+"section.later" = "Plus tard";
+/* Actions */
+"action.delete" = "Supprimer";
+"action.mute" = "Désactiver";
+"action.unmute" = "Activer";
+"action.favorite" = "Favori";
+"action.unfavorite" = "Retirer";
+/* Add/Edit */
+"addEdit.add.title" = "Ajouter un anniversaire";
+"addEdit.edit.title" = "Modifier l'anniversaire";
+"addEdit.section.person" = "Personne";
+"addEdit.field.name" = "Nom";
+"addEdit.field.emoji" = "Emoji (optionnel)";
+"addEdit.section.birthday" = "Anniversaire";
+"addEdit.field.month" = "Mois";
+"addEdit.field.day" = "Jour";
+"addEdit.field.year" = "Année (optionnel)";
+"addEdit.section.options" = "Options";
+"addEdit.option.favorite" = "Favori";
+"addEdit.option.notifications" = "Notifications";
+/* Common */
+"common.cancel" = "Annuler";
+"common.save" = "Enregistrer";
+/* Import */
+"import.title" = "Importer des contacts";
+"import.button" = "Importer (%d)";
+"import.importAll" = "Tout importer";
+"import.loading" = "Chargement des contacts…";
+"import.error.title" = "Accès aux contacts refusé";
+"import.error.subtitle" = "Autorisez l'accès aux Contacts dans les Réglages.";
+"import.noContacts.title" = "Aucun contact avec anniversaire";
+"import.noContacts.subtitle" = "Ajoutez des dates dans l'app Contacts.";
+"import.added" = "Ajouté";
+/* Settings */
+"settings.title" = "Réglages";
+"settings.section.appearance" = "Apparence";
+"settings.section.notifications" = "Notifications";
+"settings.section.about" = "À propos";
+"settings.notification.daily" = "Rappel quotidien";
+"settings.notification.favReminder" = "Rappel anticipé favoris";
+"settings.notification.favDays" = "%d jours avant";
+"settings.about.version" = "Version";
+"settings.about.freeForever" = "Gratuit pour toujours";
+"settings.about.freeForeverSub" = "Pas d'abonnement, pas de pub, pas de compte.";
+"settings.about.localData" = "Vos données restent sur l'appareil";
+"settings.about.localDataSub" = "Rien n'est téléchargé ni partagé. Jamais.";
+"settings.about.madeWith" = "Fait avec ❤️ à Hambourg";
+/* Birthday */
+"birthday.turns" = "Fête ses %d ans";
+"birthday.today" = "Aujourd'hui 🎂";
+"birthday.tomorrow" = "Demain";
+"birthday.inDays" = "dans %d jours";
+"birthday.days" = "jours";
+/* Widgets */
+"widget.empty" = "Aucun anniversaire";
+"widget.emptySubtitle" = "Ouvrir l'app pour en ajouter";
+"widget.favorites" = "FAVORIS";
+"widget.noFavorites" = "Aucun favori";
+"widget.noFavoritesSub" = "Marquez quelqu'un dans l'app";
+"widget.comingUp" = "À VENIR";
+"widget.todayBirthday" = "Aujourd'hui ! 🎂";

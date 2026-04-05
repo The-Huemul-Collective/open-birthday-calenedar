@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Background gradient: warm pink to purple -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C850C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B4FE8;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Balloon body gradient: warm coral/orange -->
+    <radialGradient id="balloonGrad" cx="38%" cy="32%" r="62%" fx="35%" fy="28%">
+      <stop offset="0%" style="stop-color:#FFE8A3;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FFB347;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8640A;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Small balloon gradient: pink -->
+    <radialGradient id="balloonGrad2" cx="38%" cy="32%" r="62%" fx="35%" fy="28%">
+      <stop offset="0%" style="stop-color:#FFD6E8;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FF85C2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8306A;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Small balloon gradient: teal -->
+    <radialGradient id="balloonGrad3" cx="38%" cy="32%" r="62%" fx="35%" fy="28%">
+      <stop offset="0%" style="stop-color:#C8F5E8;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#4DD9AC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A9E78;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Highlight sheen -->
+    <radialGradient id="sheen" cx="35%" cy="28%" r="40%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.55" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <filter id="shadowSm" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+
+    <!-- Rounded square clip for icon shape -->
+    <clipPath id="iconClip">
+      <rect width="1024" height="1024" rx="220" ry="220"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="220" ry="220" fill="url(#bgGrad)"/>
+
+  <!-- Subtle background confetti dots -->
+  <circle cx="120" cy="180" r="18" fill="#FFFFFF" opacity="0.12"/>
+  <circle cx="900" cy="140" r="12" fill="#FFFFFF" opacity="0.10"/>
+  <circle cx="80" cy="750" r="22" fill="#FFFFFF" opacity="0.09"/>
+  <circle cx="950" cy="820" r="16" fill="#FFFFFF" opacity="0.11"/>
+  <circle cx="200" cy="920" r="10" fill="#FFFFFF" opacity="0.08"/>
+  <circle cx="820" cy="960" r="14" fill="#FFFFFF" opacity="0.09"/>
+  <circle cx="960" cy="400" r="9" fill="#FFFFFF" opacity="0.10"/>
+  <circle cx="60" cy="480" r="11" fill="#FFFFFF" opacity="0.08"/>
+  <!-- Star shapes -->
+  <text x="840" y="220" font-size="36" fill="#FFFFFF" opacity="0.18" font-family="sans-serif">✦</text>
+  <text x="130" y="360" font-size="28" fill="#FFFFFF" opacity="0.14" font-family="sans-serif">✦</text>
+  <text x="760" y="900" font-size="22" fill="#FFFFFF" opacity="0.13" font-family="sans-serif">✦</text>
+
+  <!-- === LEFT SMALL BALLOON (pink, slightly tilted left) === -->
+  <g transform="translate(268, 460) rotate(-18)" filter="url(#shadowSm)">
+    <!-- Balloon body -->
+    <ellipse cx="0" cy="0" rx="95" ry="118" fill="url(#balloonGrad2)"/>
+    <!-- Sheen -->
+    <ellipse cx="0" cy="0" rx="95" ry="118" fill="url(#sheen)"/>
+    <!-- Knot -->
+    <ellipse cx="0" cy="122" rx="11" ry="8" fill="#E8306A" opacity="0.9"/>
+    <!-- String -->
+    <path d="M0 130 Q-15 190 5 250 Q25 310 0 370" stroke="#FFFFFF" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- === RIGHT SMALL BALLOON (teal, slightly tilted right) === -->
+  <g transform="translate(756, 440) rotate(16)" filter="url(#shadowSm)">
+    <!-- Balloon body -->
+    <ellipse cx="0" cy="0" rx="95" ry="118" fill="url(#balloonGrad3)"/>
+    <!-- Sheen -->
+    <ellipse cx="0" cy="0" rx="95" ry="118" fill="url(#sheen)"/>
+    <!-- Knot -->
+    <ellipse cx="0" cy="122" rx="11" ry="8" fill="#0A9E78" opacity="0.9"/>
+    <!-- String -->
+    <path d="M0 130 Q18 195 -4 255 Q-22 315 2 375" stroke="#FFFFFF" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- === MAIN CENTER BALLOON (orange/gold) === -->
+  <g transform="translate(512, 390)" filter="url(#shadow)">
+    <!-- Balloon body -->
+    <ellipse cx="0" cy="0" rx="175" ry="215" fill="url(#balloonGrad)"/>
+    <!-- Sheen highlight -->
+    <ellipse cx="0" cy="0" rx="175" ry="215" fill="url(#sheen)"/>
+    <!-- Knot -->
+    <ellipse cx="0" cy="222" rx="18" ry="13" fill="#C85B08" opacity="0.9"/>
+    <!-- String down to bottom area -->
+    <path d="M0 235 Q-20 340 8 450 Q30 540 0 640" stroke="#FFFFFF" stroke-width="4.5" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </g>
+
+  <!-- Sparkles near main balloon -->
+  <text x="618" y="198" font-size="42" fill="#FFFFFF" opacity="0.75" font-family="sans-serif">✨</text>
+  <text x="354" y="222" font-size="30" fill="#FFFFFF" opacity="0.60" font-family="sans-serif">✨</text>
+
+
+  <!-- App name -->
+  <text
+    x="512"
+    y="870"
+    text-anchor="middle"
+    font-family="-apple-system, 'SF Pro Rounded', 'Helvetica Neue', sans-serif"
+    font-weight="800"
+    font-size="90"
+    fill="#FFFFFF"
+    opacity="0.95"
+    letter-spacing="-2"
+  >OPEN</text>
+  <text
+    x="512"
+    y="960"
+    text-anchor="middle"
+    font-family="-apple-system, 'SF Pro Rounded', 'Helvetica Neue', sans-serif"
+    font-weight="700"
+    font-size="62"
+    fill="#FFFFFF"
+    opacity="0.75"
+    letter-spacing="6"
+  >BIRTHDAY</text>
+</svg>
