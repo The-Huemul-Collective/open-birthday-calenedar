@@ -65,12 +65,6 @@ enum L10n {
         static var optionNotif: String     { loc("addEdit.option.notifications") }
     }
 
-    // MARK: - Common
-    enum Common {
-        static var cancel: String { loc("common.cancel") }
-        static var save: String   { loc("common.save") }
-    }
-
     // MARK: - Import Contacts
     enum Import {
         static var title: String             { loc("import.title") }
@@ -110,7 +104,7 @@ enum L10n {
         static var days: String      { loc("birthday.days") }
     }
 
-    // MARK: - Widgets
+    // MARK: - Birthday widgets
     enum Widget {
         static var empty: String          { loc("widget.empty") }
         static var emptySubtitle: String  { loc("widget.emptySubtitle") }
@@ -119,6 +113,78 @@ enum L10n {
         static var noFavoritesSub: String { loc("widget.noFavoritesSub") }
         static var comingUp: String       { loc("widget.comingUp") }
         static var todayBirthday: String  { loc("widget.todayBirthday") }
+    }
+
+    // MARK: - Event countdown widgets
+    enum EventWidget {
+        static var noEvent: String         { loc("eventWidget.noEvent") }
+        static var noEventSub: String      { loc("eventWidget.noEventSub") }
+        static var noMore: String          { loc("eventWidget.noMore") }
+        static var countdown: String       { loc("eventWidget.countdown") }
+        static var countdownDesc: String   { loc("eventWidget.countdownDesc") }
+        static var multiCountdown: String  { loc("eventWidget.multiCountdown") }
+        static var multiCountdownDesc: String { loc("eventWidget.multiCountdownDesc") }
+        static var liveCountdown: String   { loc("eventWidget.liveCountdown") }
+        static var liveCountdownDesc: String  { loc("eventWidget.liveCountdownDesc") }
+        static var dashboard: String       { loc("eventWidget.dashboard") }
+        static var dashboardDesc: String   { loc("eventWidget.dashboardDesc") }
+        static var days: String            { loc("eventWidget.days") }
+        static var hrs: String             { loc("eventWidget.hrs") }
+        static var min: String             { loc("eventWidget.min") }
+        static var sec: String             { loc("eventWidget.sec") }
+    }
+
+    // MARK: - Event list
+    enum EventList {
+        static var title: String              { loc("eventList.title") }
+        static var searchPlaceholder: String  { loc("eventList.searchPlaceholder") }
+        static var emptyTitle: String         { loc("eventList.empty.title") }
+        static var emptySubtitle: String      { loc("eventList.empty.subtitle") }
+        static var noResultsTitle: String     { loc("eventList.noResults.title") }
+        static func noResultsSubtitle(_ q: String) -> String {
+            String(format: loc("eventList.noResults.subtitle"), q)
+        }
+    }
+
+    // MARK: - Add / Edit Event
+    enum AddEvent {
+        static var addTitle: String          { loc("addEvent.add.title") }
+        static var editTitle: String         { loc("addEvent.edit.title") }
+        static var fieldTitle: String        { loc("addEvent.field.title") }
+        static var fieldDate: String         { loc("addEvent.field.date") }
+        static var fieldTime: String         { loc("addEvent.field.time") }
+        static var fieldRepeat: String       { loc("addEvent.field.repeat") }
+        static var fieldWhatsNext: String    { loc("addEvent.field.whatsNext") }
+        static var fieldPhoto: String        { loc("addEvent.field.photo") }
+        static var removePhoto: String       { loc("addEvent.removePhoto") }
+        static var fieldTextColor: String    { loc("addEvent.field.textColor") }
+        static var textColor: String         { loc("addEvent.textColor") }
+        static var fieldNotifications: String { loc("addEvent.field.notifications") }
+        static var fieldEarlyReminder: String { loc("addEvent.field.earlyReminder") }
+        static var noReminder: String        { loc("addEvent.noReminder") }
+        static var oneDayBefore: String      { loc("addEvent.1dayBefore") }
+        static func daysBefore(_ n: Int) -> String { String(format: loc("addEvent.daysBefore"), n) }
+        static var modifiers: String         { loc("addEvent.modifiers") }
+        static var exclWeekends: String      { loc("addEvent.exclWeekends") }
+        static var fieldFormatting: String   { loc("addEvent.field.formatting") }
+        static var fieldFriends: String      { loc("addEvent.field.friends") }
+        static var fieldStartDate: String    { loc("addEvent.field.startDate") }
+        static var duplicate: String         { loc("addEvent.duplicate") }
+        static var archive: String           { loc("addEvent.archive") }
+        static var delete: String            { loc("addEvent.delete") }
+        static var deleteAlert: String       { loc("addEvent.deleteAlert") }
+        static var deleteMessage: String     { loc("addEvent.deleteMessage") }
+        static var modifiersTitle: String    { loc("addEvent.modifiersTitle") }
+        static var excludeWeekends: String   { loc("addEvent.excludeWeekends") }
+    }
+
+    // MARK: - Common (additions)
+    enum Common {
+        static var cancel: String { loc("common.cancel") }
+        static var save: String   { loc("common.save") }
+        static var done: String   { loc("common.done") }
+        static var none: String   { loc("common.none") }
+        static var archive: String { loc("common.archive") }
     }
 
     // MARK: - Private
