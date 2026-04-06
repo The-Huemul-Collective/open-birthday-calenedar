@@ -10,7 +10,10 @@
       "Bash(ls -d BirthdayWidgets/*.lproj)",
       "Bash(python3 -c ':*)",
       "Bash(python3:*)",
-      "Bash(plutil:*)"
+      "Bash(plutil:*)",
+      "Bash(ls /Users/javi/projects/open-birthday-calenedar/*.png)",
+      "mcp__claude_ai_Canva__generate-design",
+      "Bash(sips:*)"
     ]
   }
 }
