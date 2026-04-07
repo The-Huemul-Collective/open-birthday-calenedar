@@ -6,6 +6,7 @@ struct RootView: View {
     @EnvironmentObject var themeManager: ThemeManager
     @ObservedObject var settings: AppSettings
     @Query private var allPeople: [Person]
+    @Query private var allEvents: [CountdownEvent]
 
     // Set to true after onboarding so MainTabView immediately opens import sheet
     @State private var openImportAfterOnboarding = false
@@ -21,9 +22,13 @@ struct RootView: View {
                 .onAppear {
                     openImportAfterOnboarding = false
                     PersistenceService.shared.syncWidgetData(from: allPeople)
+                    PersistenceService.shared.syncWidgetEvents(from: allEvents)
                 }
                 .onChange(of: allPeople) {
                     PersistenceService.shared.syncWidgetData(from: allPeople)
+                }
+                .onChange(of: allEvents) {
+                    PersistenceService.shared.syncWidgetEvents(from: allEvents)
                 }
         }
     }
@@ -41,6 +46,11 @@ struct MainTabView: View {
             BirthdayListView(settings: settings, openImportOnAppear: openImportOnAppear)
                 .tabItem {
                     Label(L10n.BirthdayList.title, systemImage: "gift.fill")
+                }
+
+            EventListView(settings: settings)
+                .tabItem {
+                    Label("Events", systemImage: "timer")
                 }
 
             SettingsView(settings: settings)

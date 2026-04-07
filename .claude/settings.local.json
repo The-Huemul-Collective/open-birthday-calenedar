@@ -13,7 +13,15 @@
       "Bash(plutil:*)",
       "Bash(ls /Users/javi/projects/open-birthday-calenedar/*.png)",
       "mcp__claude_ai_Canva__generate-design",
-      "Bash(sips:*)"
+      "Bash(sips:*)",
+      "Bash(xcodebuild -project BirthdayCalendar.xcodeproj -scheme BirthdayCalendar -destination 'platform=iOS Simulator,name=iPhone 16' build)",
+      "Bash(xcodebuild -project /Users/javi/projects/open-birthday-calenedar/BirthdayCalendar.xcodeproj -scheme BirthdayCalendar -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build)",
+      "Bash(xcodebuild -project /Users/javi/projects/open-birthday-calenedar/BirthdayCalendar.xcodeproj -scheme BirthdayCalendar -destination \"generic/platform=iOS Simulator\" -configuration Debug build)",
+      "Bash(ls:*)",
+      "Bash(xcodebuild -project BirthdayCalendar.xcodeproj -scheme BirthdayCalendar -destination \"generic/platform=iOS Simulator\" -configuration Debug build)",
+      "Bash(xcodebuild -scheme BirthdayCalendar -destination 'platform=iOS Simulator,name=iPhone 16 Pro' build)",
+      "Bash(xcodebuild -scheme BirthdayCalendar -destination 'platform=iOS Simulator,name=iPhone 16' build)",
+      "Bash(xcodebuild -scheme BirthdayCalendar -destination 'platform=iOS Simulator,name=iPhone 17' build)"
     ]
   }
 }

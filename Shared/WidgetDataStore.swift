@@ -53,4 +53,40 @@ struct WidgetDataStore {
         else { return nil }
         return UIImage(data: data)
     }
+
+    // MARK: - Events
+
+    private static let eventFileName = "widget_events.json"
+
+    static var eventFileURL: URL? {
+        FileManager.default
+            .containerURL(forSecurityApplicationGroupIdentifier: appGroupID)?
+            .appendingPathComponent(eventFileName)
+    }
+
+    static func saveEvents(_ events: [WidgetEvent]) {
+        guard let url = eventFileURL else { return }
+        if let data = try? JSONEncoder().encode(events) {
+            try? data.write(to: url, options: .atomic)
+        }
+    }
+
+    static func loadEvents() -> [WidgetEvent] {
+        guard let url = eventFileURL,
+              let data = try? Data(contentsOf: url),
+              let events = try? JSONDecoder().decode([WidgetEvent].self, from: data)
+        else { return [] }
+        return events.sorted { $0.daysUntilEvent < $1.daysUntilEvent }
+    }
+
+    /// Loads an event's photo frame from the App Group container.
+    static func eventImage(for event: WidgetEvent) -> UIImage? {
+        guard let fileName = event.photoFileName,
+              let url = FileManager.default
+                .containerURL(forSecurityApplicationGroupIdentifier: appGroupID)?
+                .appendingPathComponent(fileName),
+              let data = try? Data(contentsOf: url)
+        else { return nil }
+        return UIImage(data: data)
+    }
 }

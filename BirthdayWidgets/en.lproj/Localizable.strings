@@ -82,6 +82,11 @@
 "birthday.inDays" = "in %d days";
 "birthday.days" = "days";
 
+/* Common (additions) */
+"common.done" = "Done";
+"common.none" = "None";
+"common.archive" = "Archive";
+
 /* Widgets */
 "widget.empty" = "No birthdays";
 "widget.emptySubtitle" = "Open the app to add some";
@@ -90,3 +95,58 @@
 "widget.noFavoritesSub" = "Star someone in the app";
 "widget.comingUp" = "COMING UP";
 "widget.todayBirthday" = "Today! 🎂";
+
+/* Event countdown widgets */
+"eventWidget.noEvent" = "No event set";
+"eventWidget.noEventSub" = "Long press to choose";
+"eventWidget.noMore" = "No more events";
+"eventWidget.countdown" = "Countdown";
+"eventWidget.countdownDesc" = "Shows a countdown to your event.";
+"eventWidget.multiCountdown" = "Multi Countdown";
+"eventWidget.multiCountdownDesc" = "One event is not enough? Simply add two events!";
+"eventWidget.liveCountdown" = "Live Countdown";
+"eventWidget.liveCountdownDesc" = "Counts down in days, hours, minutes and seconds.";
+"eventWidget.dashboard" = "Countdown Dashboard";
+"eventWidget.dashboardDesc" = "Always keep your events with you.";
+"eventWidget.days" = "Days";
+"eventWidget.hrs" = "Hrs";
+"eventWidget.min" = "Min";
+"eventWidget.sec" = "Sec";
+
+/* Event list */
+"eventList.title" = "Events";
+"eventList.searchPlaceholder" = "Search events";
+"eventList.empty.title" = "No events yet";
+"eventList.empty.subtitle" = "Tap + to add your first countdown";
+"eventList.noResults.title" = "No results";
+"eventList.noResults.subtitle" = "No events matching \"%@\"";
+
+/* Add / Edit Event */
+"addEvent.add.title" = "New Event";
+"addEvent.edit.title" = "Edit Event";
+"addEvent.field.title" = "Title";
+"addEvent.field.date" = "Date";
+"addEvent.field.time" = "Time";
+"addEvent.field.repeat" = "Repeat";
+"addEvent.field.whatsNext" = "What's next?";
+"addEvent.field.photo" = "Photo Frame";
+"addEvent.removePhoto" = "Remove photo";
+"addEvent.field.textColor" = "Custom text color";
+"addEvent.textColor" = "Text color";
+"addEvent.field.notifications" = "Push Notification";
+"addEvent.field.earlyReminder" = "Early Reminder";
+"addEvent.noReminder" = "None";
+"addEvent.1dayBefore" = "1 day before";
+"addEvent.daysBefore" = "%d days before";
+"addEvent.modifiers" = "Countdown modifiers";
+"addEvent.exclWeekends" = "Excl. weekends";
+"addEvent.field.formatting" = "Formatting";
+"addEvent.field.friends" = "Friends";
+"addEvent.field.startDate" = "Start date";
+"addEvent.duplicate" = "Duplicate event";
+"addEvent.archive" = "Archive event";
+"addEvent.delete" = "Delete event";
+"addEvent.deleteAlert" = "Delete Event";
+"addEvent.deleteMessage" = "This event will be permanently deleted.";
+"addEvent.modifiersTitle" = "Modifiers";
+"addEvent.excludeWeekends" = "Exclude weekends";

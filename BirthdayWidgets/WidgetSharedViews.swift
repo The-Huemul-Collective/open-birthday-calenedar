@@ -67,46 +67,69 @@ struct WidgetHeroView: View {
     }
 
     private func filledHero(_ person: WidgetPerson) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .center, spacing: 0) {
+            // Header: fav star (if applicable) + time label
             HStack {
-                WidgetAvatarView(person: person, size: 36, theme: theme)
-                Spacer()
                 if person.isFavorite {
-                    Image(systemName: "star.fill")
-                        .font(.system(size: 11))
-                        .foregroundStyle(theme.favTint)
+                    HStack(spacing: 3) {
+                        Image(systemName: "star.fill")
+                            .font(.system(size: 9, weight: .bold))
+                            .foregroundStyle(theme.favTint)
+                        Text("Fav")
+                            .font(.system(size: 10, weight: .bold, design: .rounded))
+                            .foregroundStyle(theme.favTint)
+                    }
+                } else {
+                    Image(systemName: "birthday.cake")
+                        .font(.system(size: 10, weight: .medium))
+                        .foregroundStyle(theme.textSecondary)
                 }
+                Spacer()
+                Text(timeLabel(person.daysUntilBirthday))
+                    .font(.system(size: 10, weight: .semibold, design: .rounded))
+                    .foregroundStyle(theme.textSecondary)
             }
 
             Spacer()
 
+            // Big avatar
+            WidgetAvatarView(person: person, size: 76, theme: theme)
+
+            Spacer()
+
+            // Name + date
             Text(person.name)
                 .font(.system(size: 15, weight: .bold, design: .rounded))
                 .foregroundStyle(theme.textPrimary)
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
 
-            Text(person.ageDisplay)
+            Text(formattedDate(person))
                 .font(.system(size: 11))
                 .foregroundStyle(theme.textSecondary)
-
-            HStack(alignment: .firstTextBaseline, spacing: 3) {
-                if person.daysUntilBirthday == 0 {
-                    Text(L10n.Widget.todayBirthday)
-                        .font(.system(size: 18, weight: .bold, design: .rounded))
-                        .foregroundStyle(theme.accent)
-                } else {
-                    Text("\(person.daysUntilBirthday)")
-                        .font(.system(size: 26, weight: .bold, design: .rounded))
-                        .foregroundStyle(theme.textPrimary)
-                    Text(L10n.Birthday.days)
-                        .font(.system(size: 11, weight: .medium))
-                        .foregroundStyle(theme.textSecondary)
-                        .padding(.bottom, 2)
-                }
-            }
+                .padding(.top, 1)
         }
-        .padding(12)
+        .padding(10)
+    }
+
+    private func timeLabel(_ days: Int) -> String {
+        switch days {
+        case 0:       return "Today 🎉"
+        case 1:       return "Tomorrow"
+        case 2...30:  return "In \(days) days"
+        default:      return "\(days) days"
+        }
+    }
+
+    private func formattedDate(_ person: WidgetPerson) -> String {
+        var comps = DateComponents()
+        comps.month = person.birthdayMonth
+        comps.day = person.birthdayDay
+        comps.year = 2000
+        guard let date = Calendar.current.date(from: comps) else { return "" }
+        let fmt = DateFormatter()
+        fmt.dateFormat = "MMM d"
+        return fmt.string(from: date)
     }
 
     private var emptyHero: some View {
@@ -122,7 +145,7 @@ struct WidgetHeroView: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(12)
+        .padding(0)
     }
 }
 

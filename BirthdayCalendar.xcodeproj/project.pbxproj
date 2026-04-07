@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		04AEC812CE709220DCBF0406 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05CD8E1A55C8904858B884 /* SettingsView.swift */; };
+		0C939CFA273C74FC095FAF23 /* FriendAvatarStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16C0443D13B055BA6B97CF8 /* FriendAvatarStack.swift */; };
+		0DC274A22420907E8570FE1C /* DatabaseErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF9E69799098C71078AA3D /* DatabaseErrorView.swift */; };
 		0F90043C434C578C8EFC56E9 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505B2BA5FFAB0E711ECF323A /* AvatarView.swift */; };
 		1064C8551AB1261BC42E289B /* BirthdayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270BBE90E1A4F5A11EBC6B73 /* BirthdayListView.swift */; };
 		10694B4F6B4F094701C4FDC9 /* LiquidGlassTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18E9D9E673174BA55EAB8CB /* LiquidGlassTheme.swift */; };
 		229B6FA87707F02E71274817 /* SmallNextFavBirthdayWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BCF51DDB937F9C9F640CB /* SmallNextFavBirthdayWidget.swift */; };
+		2570388C115A84F66091CDCC /* AddEditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0003FB0CD9A077E2F7B3E83 /* AddEditEventView.swift */; };
 		2D2B81B84874276928C32299 /* WidgetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA07087CEFFE328FC97C5079 /* WidgetDataStore.swift */; };
+		2FB2804B00BD5255E3CF1518 /* FriendPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D09BBFE40E754580571981 /* FriendPickerView.swift */; };
 		2FD2F8D96E7BBDDD17B9B5AC /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76F0BF3EDE12FFD49E85B4 /* L10n.swift */; };
 		332378A106B5528910BA8250 /* BirthdayCalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09062D2E57F4CD0531C4DECD /* BirthdayCalendarApp.swift */; };
 		40966F450576568CC3EFDE37 /* SharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947946F583E2898AE9B83CBA /* SharedModels.swift */; };
@@ -20,30 +24,47 @@
 		51E489280A498794FB09B601 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FCB8A0A90A2CFAEBB8A22 /* NotificationService.swift */; };
 		55778CAEC5774222F631AC44 /* ContactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D11EC32DC34F0A49D7FAF2 /* ContactsService.swift */; };
 		56E669DEA765B07A5BE8B207 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE4895974556B9DE21A581 /* Person.swift */; };
+		5CB11C9CF806DB92ECD93297 /* CountdownEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EE4CE2E0333E9D695FD89B /* CountdownEvent.swift */; };
 		5E11C13449F727134A23E17B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26610658BC65BCCAD5444A08 /* Localizable.strings */; };
 		652778511964DEB9C5CFB417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CED7231F2DB1DC906144A27 /* Assets.xcassets */; };
+		657A9D3CE5E701E0B438A9DA /* DashboardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485FCBAFEE9438A93B877085 /* DashboardWidget.swift */; };
 		66F463D5A1214B079F1BFAE8 /* CountdownBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1D5DF85C05F9C0BED9FF98 /* CountdownBadge.swift */; };
+		67D535A3182A4B9EA423E9EA /* EventWidgetIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD610FB73039A3E05D2D8EB /* EventWidgetIntents.swift */; };
 		7925ACCD2E91BE810094374C /* SmallNextBirthdayWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874FAD67554BC2E879BC7891 /* SmallNextBirthdayWidget.swift */; };
 		7D87E7B3FA9DF7C5AB18C4C2 /* WidgetSharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85C2F2ABFFF7818A73B6DED /* WidgetSharedViews.swift */; };
 		7ECB12FB54AB87FE8E7FC896 /* WidgetTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D134593C20DFFE2BA54B4C8E /* WidgetTheme.swift */; };
 		8424524D931549378B482505 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61BFC61689EF7E79E646AF9 /* PersistenceService.swift */; };
+		863AF1F626006AE8B1DD712C /* LiveCountdownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB737ED6C9A24B694C26F7 /* LiveCountdownWidget.swift */; };
+		8F162DBE1768EF7AC8535B69 /* EventNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B33EC9D63986E36528DD03 /* EventNotificationService.swift */; };
+		94EDCA7C628D968DA3DC5144 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C15801A883E56F8E150BCB /* ColorExtensions.swift */; };
 		9C43993BA2A5AE5418690BB0 /* WidgetTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D134593C20DFFE2BA54B4C8E /* WidgetTheme.swift */; };
+		A3A21A24F0949126ECB88716 /* EventWidgetSharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC9EB39490FB5BD5721170D /* EventWidgetSharedViews.swift */; };
 		A6710C70EF79F7200AACC95E /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7A69089EB0E6A0CF58F18 /* Typography.swift */; };
 		A745AD230B85BEFC3770BA6B /* MidCenturyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF9BE5F6294E6F937E83278 /* MidCenturyTheme.swift */; };
 		A9B90E692C6E57158B51DC3A /* BirthdayWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 88EED825AFC704149799C21F /* BirthdayWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B24E9680669D82EB9C0A8EA2 /* AddEditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CF19DF3A14C4616170DC4 /* AddEditPersonView.swift */; };
+		B2ECDCB83594879F02063E63 /* EventCountdownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA5C1F54E59C777DCE3D56 /* EventCountdownWidget.swift */; };
 		B767BADC0C3504216AB4C8F7 /* SharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947946F583E2898AE9B83CBA /* SharedModels.swift */; };
+		B7EDFB4E8F25898BFEE2BF98 /* EventWidgetIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD610FB73039A3E05D2D8EB /* EventWidgetIntents.swift */; };
+		BBB8397660F72014EC3388CE /* AppMigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE283EB0DA1536CA3075F5 /* AppMigrationPlan.swift */; };
 		C6AD7F22B43534A9B9D129B0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF23A6D0CB4FE90B97ACCC52 /* Theme.swift */; };
 		C8596E1B375CC1821739888E /* GradientTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BAB800C3AA504D9A35ACA8 /* GradientTheme.swift */; };
+		D0B59FDAE922B75A22BB7E40 /* EventWidgetPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF080EE556BF0C2B32A28D7 /* EventWidgetPreview.swift */; };
+		D800A41B6065383EA7400EC1 /* WidgetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8585A2D0052146780568F04 /* WidgetEvent.swift */; };
+		D88155AA9A164FD2AD33C893 /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C77705260D36956B5B0050 /* EventRowView.swift */; };
+		DC2500C1A715ED87F9FDB96C /* WidgetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8585A2D0052146780568F04 /* WidgetEvent.swift */; };
 		DC6A21D035FC70D1F2C7B082 /* MediumNextFavBirthdayWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2727E95870F0D868FBC1124 /* MediumNextFavBirthdayWidget.swift */; };
 		DE3328BA00BE0CD9403D7011 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC59805C85621C14B0CE2E /* OnboardingView.swift */; };
 		E5C3F380F3F031B021421693 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340845A3F94FF3EAF166AC6 /* RootView.swift */; };
+		E6E783553A81C0A7C14A4D11 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C451206802A98E6DFB626A9 /* EventListView.swift */; };
 		E8E1B9F2323652C2FFE69C27 /* BirthdayWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E400CBC68D136CC0829E0 /* BirthdayWidgetBundle.swift */; };
 		EE6B2FA30FAF0E208004FB0E /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6E62B1955F304114D0D90F /* EmptyStateView.swift */; };
 		F1F80B98CBA7032221D61BEA /* BirthdayRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6EA4C1C317F0A1C3A7711 /* BirthdayRowView.swift */; };
+		F211F66949A11CEE7E3F69EF /* MultiCountdownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C8CE19C35A5F46CF7BB074 /* MultiCountdownWidget.swift */; };
 		F3788370207DF0AA567BA18F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88C9C278A09EEE60C483D81F /* Localizable.strings */; };
 		F89CB038C3D73A2C22947A2C /* ImportContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34256123D39D66244C97E09E /* ImportContactsView.swift */; };
 		F91273893342A66DA623DD58 /* MediumNextBirthdayWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5837DDDD94FF386592B877FF /* MediumNextBirthdayWidget.swift */; };
+		FCEBCF92CFAFE7F6CBADA533 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C15801A883E56F8E150BCB /* ColorExtensions.swift */; };
 		FD91CBA27C3772540B9E3E1D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB35B24B163DF984E12DC78A /* AppSettings.swift */; };
 		FDBFC4E634E4EB0D4A9E3D08 /* WidgetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA07087CEFFE328FC97C5079 /* WidgetDataStore.swift */; };
 /* End PBXBuildFile section */
@@ -74,18 +95,26 @@
 
 /* Begin PBXFileReference section */
 		060F71565AB8A5F3A2CF253C /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06FA5C1F54E59C777DCE3D56 /* EventCountdownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCountdownWidget.swift; sourceTree = "<group>"; };
 		09062D2E57F4CD0531C4DECD /* BirthdayCalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCalendarApp.swift; sourceTree = "<group>"; };
+		09BF9E69799098C71078AA3D /* DatabaseErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseErrorView.swift; sourceTree = "<group>"; };
 		0A931DE818E8830E837DC4C9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0CED7231F2DB1DC906144A27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		144FCB8A0A90A2CFAEBB8A22 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		1B6A50F55F4BBD4040CCA6EE /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1CCB737ED6C9A24B694C26F7 /* LiveCountdownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCountdownWidget.swift; sourceTree = "<group>"; };
 		1F5AA2466968B54D325E081A /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		23EBE381BF74541D6B50ED28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		256B399033DDBEB7613F224D /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
+		26EE4CE2E0333E9D695FD89B /* CountdownEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownEvent.swift; sourceTree = "<group>"; };
 		270BBE90E1A4F5A11EBC6B73 /* BirthdayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListView.swift; sourceTree = "<group>"; };
+		27D09BBFE40E754580571981 /* FriendPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPickerView.swift; sourceTree = "<group>"; };
 		293CCFAAB149DE5006BBCA4E /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2B699CE56FA91FEA6AE51176 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2BD610FB73039A3E05D2D8EB /* EventWidgetIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWidgetIntents.swift; sourceTree = "<group>"; };
 		2BFB39233BF6B23CAADF2A17 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C451206802A98E6DFB626A9 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		2CF080EE556BF0C2B32A28D7 /* EventWidgetPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWidgetPreview.swift; sourceTree = "<group>"; };
 		34256123D39D66244C97E09E /* ImportContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportContactsView.swift; sourceTree = "<group>"; };
 		3A076890FE6F7B5F5E073D4B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B3536C1B2C04973D5C70EF8 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -93,8 +122,10 @@
 		3E7547F7F2FA8B96F50F6B42 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41383EA1331965F20E4FD8AA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		475C4D44C03FC4DA116B0054 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		485FCBAFEE9438A93B877085 /* DashboardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWidget.swift; sourceTree = "<group>"; };
 		498A7DA6868331B12730E919 /* BirthdayCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BirthdayCalendar.entitlements; sourceTree = "<group>"; };
 		505B2BA5FFAB0E711ECF323A /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		53B33EC9D63986E36528DD03 /* EventNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNotificationService.swift; sourceTree = "<group>"; };
 		5837DDDD94FF386592B877FF /* MediumNextBirthdayWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumNextBirthdayWidget.swift; sourceTree = "<group>"; };
 		61AE4895974556B9DE21A581 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		6CE8054D3544D2AE4492B872 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -104,11 +135,13 @@
 		7493544CA1A11EADE82B961D /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7DD3726F152F61189492971C /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7EB9357CBA1EC8A1DE959B75 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7EC9EB39490FB5BD5721170D /* EventWidgetSharedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWidgetSharedViews.swift; sourceTree = "<group>"; };
 		7F8CF19DF3A14C4616170DC4 /* AddEditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditPersonView.swift; sourceTree = "<group>"; };
 		83E456061EB006B624192DE4 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		874FAD67554BC2E879BC7891 /* SmallNextBirthdayWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallNextBirthdayWidget.swift; sourceTree = "<group>"; };
 		88EED825AFC704149799C21F /* BirthdayWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BirthdayWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		947946F583E2898AE9B83CBA /* SharedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModels.swift; sourceTree = "<group>"; };
+		97C15801A883E56F8E150BCB /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		9A6E62B1955F304114D0D90F /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		9E76F0BF3EDE12FFD49E85B4 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		9F3ED3B722FCA4099C0196A4 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -122,9 +155,12 @@
 		B1D6EA4C1C317F0A1C3A7711 /* BirthdayRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayRowView.swift; sourceTree = "<group>"; };
 		B51EA575BB3A1C237E7AC6B2 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B857BB4A8799C127E3A29496 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B8585A2D0052146780568F04 /* WidgetEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEvent.swift; sourceTree = "<group>"; };
+		B8EE283EB0DA1536CA3075F5 /* AppMigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMigrationPlan.swift; sourceTree = "<group>"; };
 		B9FD4D87FA31D8DD32D1FF54 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BC2011C0452424F597ECCD88 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF4BCF51DDB937F9C9F640CB /* SmallNextFavBirthdayWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallNextFavBirthdayWidget.swift; sourceTree = "<group>"; };
+		C0003FB0CD9A077E2F7B3E83 /* AddEditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditEventView.swift; sourceTree = "<group>"; };
 		C1D11EC32DC34F0A49D7FAF2 /* ContactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsService.swift; sourceTree = "<group>"; };
 		C2727E95870F0D868FBC1124 /* MediumNextFavBirthdayWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumNextFavBirthdayWidget.swift; sourceTree = "<group>"; };
 		C466D6FE09F45C25DA618B45 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -138,8 +174,10 @@
 		DA07087CEFFE328FC97C5079 /* WidgetDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataStore.swift; sourceTree = "<group>"; };
 		DF23A6D0CB4FE90B97ACCC52 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DF6293CC8026CA370C3E3763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E16C0443D13B055BA6B97CF8 /* FriendAvatarStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAvatarStack.swift; sourceTree = "<group>"; };
 		E18E9D9E673174BA55EAB8CB /* LiquidGlassTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidGlassTheme.swift; sourceTree = "<group>"; };
 		E4BAB800C3AA504D9A35ACA8 /* GradientTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTheme.swift; sourceTree = "<group>"; };
+		E6C77705260D36956B5B0050 /* EventRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowView.swift; sourceTree = "<group>"; };
 		E85C2F2ABFFF7818A73B6DED /* WidgetSharedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSharedViews.swift; sourceTree = "<group>"; };
 		EB35B24B163DF984E12DC78A /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		EBB4D123C01A9C7CA559DB8C /* BirthdayWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BirthdayWidgets.entitlements; sourceTree = "<group>"; };
@@ -149,6 +187,7 @@
 		F2B7A69089EB0E6A0CF58F18 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		F43E400CBC68D136CC0829E0 /* BirthdayWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayWidgetBundle.swift; sourceTree = "<group>"; };
 		F57C96AC92CD28B3C4299A75 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5C8CE19C35A5F46CF7BB074 /* MultiCountdownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCountdownWidget.swift; sourceTree = "<group>"; };
 		F7E024383AFD68C0D97B71D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F80A63D044131585421ABE2B /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F902B0F8ABB64D80B1A403F0 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -173,9 +212,14 @@
 				26610658BC65BCCAD5444A08 /* Localizable.strings */,
 				F43E400CBC68D136CC0829E0 /* BirthdayWidgetBundle.swift */,
 				EBB4D123C01A9C7CA559DB8C /* BirthdayWidgets.entitlements */,
+				485FCBAFEE9438A93B877085 /* DashboardWidget.swift */,
+				06FA5C1F54E59C777DCE3D56 /* EventCountdownWidget.swift */,
+				7EC9EB39490FB5BD5721170D /* EventWidgetSharedViews.swift */,
 				DF6293CC8026CA370C3E3763 /* Info.plist */,
+				1CCB737ED6C9A24B694C26F7 /* LiveCountdownWidget.swift */,
 				5837DDDD94FF386592B877FF /* MediumNextBirthdayWidget.swift */,
 				C2727E95870F0D868FBC1124 /* MediumNextFavBirthdayWidget.swift */,
+				F5C8CE19C35A5F46CF7BB074 /* MultiCountdownWidget.swift */,
 				874FAD67554BC2E879BC7891 /* SmallNextBirthdayWidget.swift */,
 				BF4BCF51DDB937F9C9F640CB /* SmallNextFavBirthdayWidget.swift */,
 				E85C2F2ABFFF7818A73B6DED /* WidgetSharedViews.swift */,
@@ -217,6 +261,7 @@
 			children = (
 				034FDBB049123964C0FA1157 /* AddEdit */,
 				255E5574B3E6B8ADC8D50353 /* BirthdayList */,
+				F3ABAC7E150C4D4303067D5C /* Events */,
 				BDA25E8C3849AD4D6B7A2BB8 /* Onboarding */,
 				42C71CA722603E4491BE87E5 /* Settings */,
 			);
@@ -237,7 +282,9 @@
 		6685571DFF13630D2713E9ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B8EE283EB0DA1536CA3075F5 /* AppMigrationPlan.swift */,
 				EB35B24B163DF984E12DC78A /* AppSettings.swift */,
+				26EE4CE2E0333E9D695FD89B /* CountdownEvent.swift */,
 				61AE4895974556B9DE21A581 /* Person.swift */,
 			);
 			path = Models;
@@ -257,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				09062D2E57F4CD0531C4DECD /* BirthdayCalendarApp.swift */,
+				09BF9E69799098C71078AA3D /* DatabaseErrorView.swift */,
 				D340845A3F94FF3EAF166AC6 /* RootView.swift */,
 			);
 			path = App;
@@ -285,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				C1D11EC32DC34F0A49D7FAF2 /* ContactsService.swift */,
+				53B33EC9D63986E36528DD03 /* EventNotificationService.swift */,
 				144FCB8A0A90A2CFAEBB8A22 /* NotificationService.swift */,
 				A61BFC61689EF7E79E646AF9 /* PersistenceService.swift */,
 			);
@@ -304,12 +353,25 @@
 		E292BE3E08560F9A7726744F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				97C15801A883E56F8E150BCB /* ColorExtensions.swift */,
+				2BD610FB73039A3E05D2D8EB /* EventWidgetIntents.swift */,
 				9E76F0BF3EDE12FFD49E85B4 /* L10n.swift */,
 				947946F583E2898AE9B83CBA /* SharedModels.swift */,
 				DA07087CEFFE328FC97C5079 /* WidgetDataStore.swift */,
+				B8585A2D0052146780568F04 /* WidgetEvent.swift */,
 				D134593C20DFFE2BA54B4C8E /* WidgetTheme.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		F3ABAC7E150C4D4303067D5C /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				C0003FB0CD9A077E2F7B3E83 /* AddEditEventView.swift */,
+				2C451206802A98E6DFB626A9 /* EventListView.swift */,
+				27D09BBFE40E754580571981 /* FriendPickerView.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		F60E21B256A5DCD939306919 /* Components */ = {
@@ -319,6 +381,9 @@
 				B1D6EA4C1C317F0A1C3A7711 /* BirthdayRowView.swift */,
 				6E1D5DF85C05F9C0BED9FF98 /* CountdownBadge.swift */,
 				9A6E62B1955F304114D0D90F /* EmptyStateView.swift */,
+				E6C77705260D36956B5B0050 /* EventRowView.swift */,
+				2CF080EE556BF0C2B32A28D7 /* EventWidgetPreview.swift */,
+				E16C0443D13B055BA6B97CF8 /* FriendAvatarStack.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -380,7 +445,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2610;
 			};
 			buildConfigurationList = 37BEBC7D3A8A4AFA3ECE71D7 /* Build configuration list for PBXProject "BirthdayCalendar" */;
 			developmentRegion = en;
@@ -449,13 +514,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E1B9F2323652C2FFE69C27 /* BirthdayWidgetBundle.swift in Sources */,
+				94EDCA7C628D968DA3DC5144 /* ColorExtensions.swift in Sources */,
+				657A9D3CE5E701E0B438A9DA /* DashboardWidget.swift in Sources */,
+				B2ECDCB83594879F02063E63 /* EventCountdownWidget.swift in Sources */,
+				B7EDFB4E8F25898BFEE2BF98 /* EventWidgetIntents.swift in Sources */,
+				A3A21A24F0949126ECB88716 /* EventWidgetSharedViews.swift in Sources */,
 				2FD2F8D96E7BBDDD17B9B5AC /* L10n.swift in Sources */,
+				863AF1F626006AE8B1DD712C /* LiveCountdownWidget.swift in Sources */,
 				F91273893342A66DA623DD58 /* MediumNextBirthdayWidget.swift in Sources */,
 				DC6A21D035FC70D1F2C7B082 /* MediumNextFavBirthdayWidget.swift in Sources */,
+				F211F66949A11CEE7E3F69EF /* MultiCountdownWidget.swift in Sources */,
 				B767BADC0C3504216AB4C8F7 /* SharedModels.swift in Sources */,
 				7925ACCD2E91BE810094374C /* SmallNextBirthdayWidget.swift in Sources */,
 				229B6FA87707F02E71274817 /* SmallNextFavBirthdayWidget.swift in Sources */,
 				2D2B81B84874276928C32299 /* WidgetDataStore.swift in Sources */,
+				D800A41B6065383EA7400EC1 /* WidgetEvent.swift in Sources */,
 				7D87E7B3FA9DF7C5AB18C4C2 /* WidgetSharedViews.swift in Sources */,
 				7ECB12FB54AB87FE8E7FC896 /* WidgetTheme.swift in Sources */,
 			);
@@ -465,15 +538,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2570388C115A84F66091CDCC /* AddEditEventView.swift in Sources */,
 				B24E9680669D82EB9C0A8EA2 /* AddEditPersonView.swift in Sources */,
+				BBB8397660F72014EC3388CE /* AppMigrationPlan.swift in Sources */,
 				FD91CBA27C3772540B9E3E1D /* AppSettings.swift in Sources */,
 				0F90043C434C578C8EFC56E9 /* AvatarView.swift in Sources */,
 				332378A106B5528910BA8250 /* BirthdayCalendarApp.swift in Sources */,
 				1064C8551AB1261BC42E289B /* BirthdayListView.swift in Sources */,
 				F1F80B98CBA7032221D61BEA /* BirthdayRowView.swift in Sources */,
+				FCEBCF92CFAFE7F6CBADA533 /* ColorExtensions.swift in Sources */,
 				55778CAEC5774222F631AC44 /* ContactsService.swift in Sources */,
 				66F463D5A1214B079F1BFAE8 /* CountdownBadge.swift in Sources */,
+				5CB11C9CF806DB92ECD93297 /* CountdownEvent.swift in Sources */,
+				0DC274A22420907E8570FE1C /* DatabaseErrorView.swift in Sources */,
 				EE6B2FA30FAF0E208004FB0E /* EmptyStateView.swift in Sources */,
+				E6E783553A81C0A7C14A4D11 /* EventListView.swift in Sources */,
+				8F162DBE1768EF7AC8535B69 /* EventNotificationService.swift in Sources */,
+				D88155AA9A164FD2AD33C893 /* EventRowView.swift in Sources */,
+				67D535A3182A4B9EA423E9EA /* EventWidgetIntents.swift in Sources */,
+				D0B59FDAE922B75A22BB7E40 /* EventWidgetPreview.swift in Sources */,
+				0C939CFA273C74FC095FAF23 /* FriendAvatarStack.swift in Sources */,
+				2FB2804B00BD5255E3CF1518 /* FriendPickerView.swift in Sources */,
 				C8596E1B375CC1821739888E /* GradientTheme.swift in Sources */,
 				F89CB038C3D73A2C22947A2C /* ImportContactsView.swift in Sources */,
 				458FDD6B8B1F478E74DC9C52 /* L10n.swift in Sources */,
@@ -489,6 +574,7 @@
 				C6AD7F22B43534A9B9D129B0 /* Theme.swift in Sources */,
 				A6710C70EF79F7200AACC95E /* Typography.swift in Sources */,
 				FDBFC4E634E4EB0D4A9E3D08 /* WidgetDataStore.swift in Sources */,
+				DC2500C1A715ED87F9FDB96C /* WidgetEvent.swift in Sources */,
 				9C43993BA2A5AE5418690BB0 /* WidgetTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +655,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -601,9 +688,10 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 682H2L64R5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -625,6 +713,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;
@@ -635,6 +724,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -667,9 +757,10 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 682H2L64R5;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -684,6 +775,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;
@@ -694,7 +786,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = BirthdayWidgets/BirthdayWidgets.entitlements;
-				DEVELOPMENT_TEAM = 682H2L64R5;
 				INFOPLIST_FILE = BirthdayWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -711,7 +802,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = BirthdayWidgets/BirthdayWidgets.entitlements;
-				DEVELOPMENT_TEAM = 682H2L64R5;
 				INFOPLIST_FILE = BirthdayWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -730,7 +820,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BirthdayCalendar/Resources/BirthdayCalendar.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 682H2L64R5;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BirthdayCalendar/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -749,7 +838,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BirthdayCalendar/Resources/BirthdayCalendar.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 682H2L64R5;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BirthdayCalendar/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
