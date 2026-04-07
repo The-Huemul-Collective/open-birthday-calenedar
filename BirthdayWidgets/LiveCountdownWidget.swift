@@ -61,49 +61,45 @@ struct LiveCountdownView: View {
             Text(event.shortFormattedDate)
                 .font(.system(size: 10))
                 .foregroundStyle(color.opacity(0.65))
-                .padding(.top, 0)
 
             Spacer(minLength: 0)
 
             // D : HH:MM:SS
-            // Text(.timer) on subDayTimerDate gives a live HH:MM:SS that the system
-            // updates every second without needing rapid timeline entries.
             HStack(alignment: .firstTextBaseline, spacing: 0) {
                 Text("\(days)")
-                    .font(.system(size: 30, weight: .bold, design: .monospaced))
+                    .font(.system(size: 36, weight: .bold, design: .monospaced))
                     .foregroundStyle(color)
                 Text(":")
-                    .font(.system(size: 30, weight: .bold, design: .monospaced))
+                    .font(.system(size: 36, weight: .bold, design: .monospaced))
                     .foregroundStyle(color.opacity(0.45))
                 Text(event.subDayTimerDate, style: .timer)
-                    .font(.system(size: 30, weight: .bold, design: .monospaced))
+                    .font(.system(size: 36, weight: .bold, design: .monospaced))
                     .foregroundStyle(color)
                     .minimumScaleFactor(0.45)
                     .lineLimit(1)
             }
 
-            // Column labels
-            HStack(spacing: 0) {
+            // Column labels — all left-aligned, next to each other
+            HStack(spacing: 16) {
                 Text(L10n.EventWidget.days)
                     .font(.system(size: 9, weight: .medium))
                     .foregroundStyle(color.opacity(0.55))
-                Spacer()
-                Text("\(L10n.EventWidget.hrs)   \(L10n.EventWidget.min)   \(L10n.EventWidget.sec)")
+                Text(L10n.EventWidget.hrs)
                     .font(.system(size: 9, weight: .medium))
                     .foregroundStyle(color.opacity(0.55))
-            }
-            .padding(.top, 0)
-
-            // Friend avatars
-            if !event.friendIDs.isEmpty {
-                HStack {
-                    Spacer()
-                    WidgetFriendAvatarStack(friendIDs: event.friendIDs, theme: entry.theme, size: 16)
+                Text(L10n.EventWidget.min)
+                    .font(.system(size: 9, weight: .medium))
+                    .foregroundStyle(color.opacity(0.55))
+                Text(L10n.EventWidget.sec)
+                    .font(.system(size: 9, weight: .medium))
+                    .foregroundStyle(color.opacity(0.55))
+                Spacer()
+                if !event.friendIDs.isEmpty {
+                    WidgetFriendAvatarStack(friendIDs: event.friendIDs, theme: entry.theme, size: 28)
                 }
-                .padding(.top, 0)
             }
         }
-        .padding(0)
+        .padding(12)
     }
 
     private var noEventContent: some View {

@@ -54,46 +54,34 @@ struct MultiCountdownProvider: AppIntentTimelineProvider {
 private struct EventHalfCard: View {
     let event: WidgetEvent?
     let theme: WidgetTheme
+    var onPhoto: Bool = false   // true when widget has a global photo background
 
     var body: some View {
         if let event { filledCard(event) } else { emptyCard }
     }
 
     private func filledCard(_ event: WidgetEvent) -> some View {
-        let textColor  = eventTextColor(event, theme: theme)
-        let numColor   = eventAccentColor(event, theme: theme)
-        return ZStack {
-            if let img = WidgetDataStore.eventImage(for: event) {
-                Image(uiImage: img)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .clipped()
-                    .overlay(
-                        LinearGradient(
-                            colors: [.black.opacity(0.65), .black.opacity(0.20), .black.opacity(0.55)],
-                            startPoint: .top, endPoint: .bottom
-                        )
-                    )
-            }
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 3) {
-                    if !event.icon.isEmpty { Text(event.icon).font(.system(size: 11)) }
-                    Text(event.title)
-                        .font(.system(size: 11, weight: .semibold, design: .rounded))
-                        .foregroundStyle(textColor)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.8)
-                }
-
-                Spacer(minLength: 0)
-
-                Text("\(event.countdownValue)")
-                    .font(.system(size: 38, weight: .bold, design: .rounded))
-                    .foregroundStyle(numColor)
-                    .minimumScaleFactor(0.5)
+        let textColor: Color = onPhoto ? .white : eventTextColor(event, theme: theme)
+        let numColor:  Color = onPhoto ? .white : eventAccentColor(event, theme: theme)
+        return VStack(alignment: .leading, spacing: 2) {
+            HStack(spacing: 3) {
+                if !event.icon.isEmpty { Text(event.icon).font(.system(size: 12)) }
+                Text(event.title)
+                    .font(.system(size: 12, weight: .semibold, design: .rounded))
+                    .foregroundStyle(textColor)
                     .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+            }
 
+            Spacer(minLength: 0)
+
+            Text("\(event.countdownValue)")
+                .font(.system(size: 52, weight: .bold, design: .rounded))
+                .foregroundStyle(numColor)
+                .minimumScaleFactor(0.5)
+                .lineLimit(1)
+
+            HStack(alignment: .bottom) {
                 VStack(alignment: .leading, spacing: 0) {
                     Text(event.countdownLabel)
                         .font(.system(size: 10, weight: .medium))
@@ -102,32 +90,24 @@ private struct EventHalfCard: View {
                         .font(.system(size: 9))
                         .foregroundStyle(textColor.opacity(0.70))
                 }
-
+                Spacer()
                 if !event.friendIDs.isEmpty {
-                    WidgetFriendAvatarStack(friendIDs: event.friendIDs, theme: theme, size: 16)
-                        .padding(.top, 2)
+                    WidgetFriendAvatarStack(friendIDs: event.friendIDs, theme: theme, size: 22)
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .padding(0)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .clipped()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .padding(10)
     }
 
     private var emptyCard: some View {
         VStack(spacing: 4) {
             Text(L10n.EventWidget.noEvent)
                 .font(.system(size: 12, weight: .semibold, design: .rounded))
-                .foregroundStyle(theme.textPrimary)
-                .multilineTextAlignment(.center)
-            Text(L10n.EventWidget.noEventSub)
-                .font(.system(size: 10))
-                .foregroundStyle(theme.textSecondary)
+                .foregroundStyle(onPhoto ? .white : theme.textPrimary)
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(0)
     }
 }
 
@@ -136,20 +116,26 @@ private struct EventHalfCard: View {
 struct MultiCountdownView: View {
     let entry: MultiEventEntry
 
+    private var hasPhoto: Bool {
+        entry.event1.flatMap { WidgetDataStore.eventImage(for: $0) } != nil
+    }
+
     var body: some View {
         HStack(spacing: 0) {
-            EventHalfCard(event: entry.event1, theme: entry.theme)
+            EventHalfCard(event: entry.event1, theme: entry.theme, onPhoto: hasPhoto)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
             Rectangle()
-                .fill(entry.theme.divider)
+                .fill(hasPhoto ? Color.white.opacity(0.25) : entry.theme.divider)
                 .frame(width: 1)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 4)
 
-            EventHalfCard(event: entry.event2, theme: entry.theme)
+            EventHalfCard(event: entry.event2, theme: entry.theme, onPhoto: hasPhoto)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .containerBackground(for: .widget) {
-            WidgetBackground(theme: entry.theme)
+            EventWidgetBackground(event: entry.event1, theme: entry.theme)
         }
     }
 }
