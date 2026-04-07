@@ -94,7 +94,7 @@ struct EventCountdownView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .padding(8)
+        .padding(0)
     }
 
     private var noEventContent: some View {
@@ -110,7 +110,7 @@ struct EventCountdownView: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(12)
+        .padding(0)
     }
 }
 

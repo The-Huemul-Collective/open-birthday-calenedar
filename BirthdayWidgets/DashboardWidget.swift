@@ -113,11 +113,11 @@ struct DashboardView: View {
                     }
                     if !event.friendIDs.isEmpty {
                         WidgetFriendAvatarStack(friendIDs: event.friendIDs, theme: entry.theme, size: 16)
-                            .padding(.top, 3)
+                            .padding(.top, 0)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .padding(10)
+                .padding(0)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .clipped()
@@ -143,7 +143,7 @@ struct DashboardView: View {
                         .font(.system(size: 10))
                         .foregroundStyle(entry.theme.textSecondary)
                         .multilineTextAlignment(.center)
-                        .padding(8)
+                        .padding(0)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
@@ -153,13 +153,13 @@ struct DashboardView: View {
                         Rectangle()
                             .fill(entry.theme.divider)
                             .frame(height: 1)
-                            .padding(.horizontal, 8)
+                            .padding(.horizontal, 0)
                     }
                 }
                 Spacer(minLength: 0)
             }
         }
-        .padding(.vertical, 6)
+        .padding(.vertical, 0)
     }
 }
 
@@ -193,8 +193,7 @@ private struct DashboardCompactRow: View {
                     .foregroundStyle(theme.textSecondary)
             }
         }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 5)
+        .padding(0)
     }
 }
 

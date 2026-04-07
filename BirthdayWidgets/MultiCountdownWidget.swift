@@ -109,7 +109,7 @@ private struct EventHalfCard: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .padding(10)
+            .padding(0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .clipped()
@@ -127,7 +127,7 @@ private struct EventHalfCard: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(10)
+        .padding(0)
     }
 }
 

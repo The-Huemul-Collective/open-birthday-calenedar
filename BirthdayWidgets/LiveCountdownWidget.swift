@@ -61,7 +61,7 @@ struct LiveCountdownView: View {
             Text(event.shortFormattedDate)
                 .font(.system(size: 10))
                 .foregroundStyle(color.opacity(0.65))
-                .padding(.top, 2)
+                .padding(.top, 0)
 
             Spacer(minLength: 0)
 
@@ -92,7 +92,7 @@ struct LiveCountdownView: View {
                     .font(.system(size: 9, weight: .medium))
                     .foregroundStyle(color.opacity(0.55))
             }
-            .padding(.top, 3)
+            .padding(.top, 0)
 
             // Friend avatars
             if !event.friendIDs.isEmpty {
@@ -100,10 +100,10 @@ struct LiveCountdownView: View {
                     Spacer()
                     WidgetFriendAvatarStack(friendIDs: event.friendIDs, theme: entry.theme, size: 16)
                 }
-                .padding(.top, 4)
+                .padding(.top, 0)
             }
         }
-        .padding(12)
+        .padding(0)
     }
 
     private var noEventContent: some View {
@@ -119,7 +119,7 @@ struct LiveCountdownView: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(12)
+        .padding(0)
     }
 }
 

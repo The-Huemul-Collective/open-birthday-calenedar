@@ -64,9 +64,10 @@ struct MediumNextBirthdayView: View {
                 .fill(t.divider)
                 .frame(width: 1)
                 .padding(.vertical, 10)
+                .padding(.horizontal, 6)
 
             // RIGHT: upcoming list (38%)
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .leading, spacing: 0) {
                 HStack(spacing: 3) {
                     Image(systemName: "calendar")
                         .font(.system(size: 8, weight: .bold))
@@ -76,6 +77,7 @@ struct MediumNextBirthdayView: View {
                         .foregroundStyle(t.textSecondary)
                         .tracking(0.4)
                 }
+                .padding(.top, 10)
 
                 if entry.upcoming.isEmpty {
                     Spacer()
@@ -85,16 +87,17 @@ struct MediumNextBirthdayView: View {
                         .multilineTextAlignment(.leading)
                     Spacer()
                 } else {
-                    ForEach(entry.upcoming) { person in
-                        WidgetCompactRow(person: person, theme: t)
+                    VStack(alignment: .leading, spacing: 5) {
+                        ForEach(entry.upcoming) { person in
+                            WidgetCompactRow(person: person, theme: t)
+                        }
                     }
+                    .padding(.top, 8)
                     Spacer(minLength: 0)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.leading, 8)
-            .padding(.trailing, 14)
-            .padding(.vertical, 12)
+            .padding(0)
         }
         .containerBackground(for: .widget) {
             WidgetBackground(theme: t)

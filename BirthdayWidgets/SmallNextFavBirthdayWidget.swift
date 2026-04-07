@@ -23,7 +23,7 @@ struct SmallNextFavProvider: TimelineProvider {
     }
 }
 
-// MARK: - Distinct view with ⭐ header
+// MARK: - Redesigned small fav widget
 
 struct SmallNextFavBirthdayView: View {
     let entry: SmallBirthdayEntry
@@ -31,79 +31,93 @@ struct SmallNextFavBirthdayView: View {
     var t: WidgetTheme { entry.theme }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            // Header badge
-            HStack(spacing: 3) {
-                Image(systemName: "star.fill")
-                    .font(.system(size: 9, weight: .bold))
-                    .foregroundStyle(t.favTint)
-                Text(L10n.Widget.favorites)
-                    .font(.system(size: 9, weight: .bold))
-                    .foregroundStyle(t.favTint)
-                    .tracking(0.5)
-            }
-            .padding(.horizontal, 12)
-            .padding(.top, 10)
-            .padding(.bottom, 4)
-
-            if let person = entry.person {
-                // Reuse hero content inline
-                VStack(alignment: .leading, spacing: 4) {
-                    WidgetAvatarView(person: person, size: 34, theme: t)
-
-                    Spacer()
-
-                    Text(person.name)
-                        .font(.system(size: 14, weight: .bold, design: .rounded))
-                        .foregroundStyle(t.textPrimary)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.8)
-
-                    Text(person.ageDisplay)
-                        .font(.system(size: 10))
-                        .foregroundStyle(t.textSecondary)
-
-                    HStack(alignment: .firstTextBaseline, spacing: 3) {
-                        if person.daysUntilBirthday == 0 {
-                            Text(L10n.Widget.todayBirthday)
-                                .font(.system(size: 16, weight: .bold, design: .rounded))
-                                .foregroundStyle(t.accent)
-                        } else {
-                            Text("\(person.daysUntilBirthday)")
-                                .font(.system(size: 24, weight: .bold, design: .rounded))
-                                .foregroundStyle(t.textPrimary)
-                            Text(L10n.Birthday.days)
-                                .font(.system(size: 10, weight: .medium))
-                                .foregroundStyle(t.textSecondary)
-                                .padding(.bottom, 2)
-                        }
-                    }
-                }
-                .padding(.horizontal, 12)
-                .padding(.bottom, 12)
-            } else {
-                // No favorites yet
-                VStack(spacing: 4) {
-                    Text("⭐")
-                        .font(.system(size: 28))
-                    Text(L10n.Widget.noFavorites)
-                        .font(.system(size: 11, weight: .semibold, design: .rounded))
-                        .foregroundStyle(t.textPrimary)
-                        .multilineTextAlignment(.center)
-                    Text(L10n.Widget.noFavoritesSub)
-                        .font(.system(size: 9))
-                        .foregroundStyle(t.textSecondary)
-                        .multilineTextAlignment(.center)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(.horizontal, 12)
-                .padding(.bottom, 12)
-            }
+        if let person = entry.person {
+            filledView(person)
+        } else {
+            emptyView
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    }
+
+    private func filledView(_ person: WidgetPerson) -> some View {
+        VStack(alignment: .center, spacing: 0) {
+            // Header row: ⭐ FAVORITES  |  "Next month"
+            HStack(alignment: .center) {
+                HStack(spacing: 3) {
+                    Image(systemName: "star.fill")
+                        .font(.system(size: 9, weight: .bold))
+                        .foregroundStyle(t.favTint)
+                    Text("Fav")
+                        .font(.system(size: 10, weight: .bold, design: .rounded))
+                        .foregroundStyle(t.favTint)
+                }
+                Spacer()
+                Text(timeLabel(person.daysUntilBirthday))
+                    .font(.system(size: 10, weight: .semibold, design: .rounded))
+                    .foregroundStyle(t.textSecondary)
+            }
+
+            Spacer()
+
+            // Big avatar
+            WidgetAvatarView(person: person, size: 76, theme: t)
+
+            Spacer()
+
+            // Name + date
+            Text(person.name)
+                .font(.system(size: 15, weight: .bold, design: .rounded))
+                .foregroundStyle(t.textPrimary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+
+            Text(formattedDate(person))
+                .font(.system(size: 11))
+                .foregroundStyle(t.textSecondary)
+                .padding(.top, 1)
+        }
+        .padding(10)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .containerBackground(for: .widget) {
             WidgetBackground(theme: t)
         }
+    }
+
+    private var emptyView: some View {
+        VStack(spacing: 6) {
+            Text("⭐").font(.system(size: 28))
+            Text(L10n.Widget.noFavorites)
+                .font(.system(size: 11, weight: .semibold, design: .rounded))
+                .foregroundStyle(t.textPrimary)
+                .multilineTextAlignment(.center)
+            Text(L10n.Widget.noFavoritesSub)
+                .font(.system(size: 9))
+                .foregroundStyle(t.textSecondary)
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .containerBackground(for: .widget) {
+            WidgetBackground(theme: t)
+        }
+    }
+
+    private func timeLabel(_ days: Int) -> String {
+        switch days {
+        case 0:       return "Today 🎉"
+        case 1:       return "Tomorrow"
+        case 2...30:  return "In \(days) days"
+        default:      return "\(days) days"
+        }
+    }
+
+    private func formattedDate(_ person: WidgetPerson) -> String {
+        var comps = DateComponents()
+        comps.month = person.birthdayMonth
+        comps.day = person.birthdayDay
+        comps.year = 2000 // arbitrary leap year for formatting
+        guard let date = Calendar.current.date(from: comps) else { return "" }
+        let fmt = DateFormatter()
+        fmt.dateFormat = "MMM d"
+        return fmt.string(from: date)
     }
 }
 
